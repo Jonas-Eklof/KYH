@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-berättelse</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .story {
+            margin-top: 1.5rem;
+            background-color: #f2f2f2;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fyll i luckorna</h1>
+    <p>Skriv in de saknade orden i formuläret nedan och skapa en komplett historia</p>
+
+    <form id="story">
+        <label for="substantiv">Substantiv (en sak):</label>
+        <input type="text" id="substantiv" name="substantiv" required> <br><br>
+        
+        <label for="verb">Verb (t.ex. springa):</label>
+        <input type="text" id="verb" name="verb" required> <br><br>
+        
+        <label for="adjektiv">Adjektiv (t.ex. ledsen):</label>
+        <input type="text" id="adjektiv" name="adjektiv" required> <br><br>
+        
+        <label for="plats">Plats (t.ex. öken):</label>
+        <input type="text" id="plats" name="plats" required> <br><br>
+
+        <button type="submit">Skapa berättelsen</button>
+    </form>
+
+    <div id="completeStory" class="story" style="display: none;">
+        <h2>Din färdiga berättelse</h2>
+        <p id="storyText"></p>
+    </div>
+
+    <script>
+        const form = document.getElementById('story');
+        const storyText = document.getElementById('storyText');
+        const completeStoryDiv = document.getElementById('completeStory');
+
+        form.addEventListener('submit', function(event){
+            event.preventDefault();
+
+            const substantiv = document.getElementById('substantiv').value;
+            const verb = document.getElementById('verb').value;
+            const adjektiv = document.getElementById('adjektiv').value;
+            const plats = document.getElementById('plats').value;
+
+            const story = `En dag gick en ${adjektiv} ${substantiv} till ${plats} för att ${verb}. Det blev ett äventyr att minnas!`;
+
+            storyText.textContent = story;
+            completeStoryDiv.style.display = 'block';
+        });
+    </script>
+    
+</body>
+</html>
