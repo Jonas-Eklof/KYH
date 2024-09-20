@@ -6,4 +6,33 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    /* background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-position: 100% 0%; */
+}
+
+#bg-img {
+    position: absolute;
+    left: 17%;
+    top: 40%;
+    scale: 200%;
+    z-index: -1;
+}
+
+nav {
+    font-family: inter;
+    float: right;
+    margin-top: 2.5rem;
+    margin-right: 4em;
+}
+
+nav>ul>li {
+    display: inline;
+    margin-right: 4rem;
+}
+
+#logo {
+    scale: 60%;
+    margin-left: 6rem;
 }
