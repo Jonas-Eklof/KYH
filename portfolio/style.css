@@ -24,6 +24,11 @@ body {
     100% {opacity: 100%;}
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
 #logo {
     scale: 60%;
     margin-left: 6rem;
@@ -32,7 +37,6 @@ body {
 nav {
     font-family: inter;
     font-size: 1.3rem;
-    float: right;
     margin-top: 2.3rem;
     margin-right: 4em;
 }
@@ -42,7 +46,7 @@ nav>ul {
 }
 
 nav>ul>li {
-    display: inline;
+    display: inline-block;
     margin-right: 4rem;
 }
 
@@ -58,7 +62,7 @@ nav>ul>li>a:hover {
 #hero-text {
     width: 27rem;
     text-align: center;
-    margin-left: 10rem;
+    margin-left: 13rem;
     margin-top: 10rem;
 }
 
