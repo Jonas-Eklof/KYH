@@ -16,7 +16,7 @@ body {
 
 body::before {
     content: "";
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -78,6 +78,7 @@ nav>ul>li>a:hover {
 
 main {
     flex: 1;
+    min-height: 100vh;
 }
 
 #hero-text {
