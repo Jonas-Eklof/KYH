@@ -35,10 +35,12 @@ p {
         scroll-padding-top: 1rem;
     }
 }
-
-
-
 /* -------------------- End of Reset ------------------------ */
+
+
+
+
+
 
 body {
     background-color: #000;
@@ -87,7 +89,7 @@ main {
 
 #hero-text {
     width: 100%;
-    min-height: 80vh;
+    min-height: 100vh;
     text-align: center;
     display: flex;
 }
@@ -125,7 +127,7 @@ footer {
 }
 
 .footer-logo {
-    scale: 60%;
+    scale: 40%;
 }
 
 footer nav ul li {
