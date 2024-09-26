@@ -1,3 +1,5 @@
+/* -------------------- Beginning of Reset ------------------------ */
+
 *,
 *::before,
 *::after {
@@ -63,9 +65,10 @@ header {
     scale: 60%
 }
 
-header nav {
+nav {
     font-size: 1.3rem;
     align-content: center;
+    display: none;
 }
 
 nav a {
