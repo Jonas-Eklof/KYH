@@ -129,9 +129,13 @@ footer {
     scale: 40%;
 }
 
+footer nav ul {
+    margin-left: -9rem;
+}
+
 footer nav ul li {
     display: inline;
-    margin: 0 2rem;
+    margin: 0 0.5rem;
 }
 
 footer figure img {
@@ -140,9 +144,12 @@ footer figure img {
 }
 
 .instagram {
-    scale: 110%;
+    width: 25%
 }
 
+.linkedin {
+    width: 25%;
+}
 
 /* ------------------------- Tablet ---------------------------- */
 
@@ -168,4 +175,9 @@ footer figure img {
     nav {
         display: block;
     }
+
+    .instagram {
+        scale: 110%;
+    }
+
 }
