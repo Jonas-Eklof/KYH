@@ -27,7 +27,6 @@ video {
 
 
 p {
-    min-width: 75ch;
     text-wrap: pretty;
 }
 
@@ -50,8 +49,10 @@ body {
     background-image: url(bg.png);
     background-position: top right;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 70%;
 }
+
+
 
 header {
     display: flex;
@@ -62,7 +63,7 @@ header {
 }
 
 #logo {
-    scale: 60%
+    scale: 40%
 }
 
 nav {
@@ -91,19 +92,19 @@ main {
 }
 
 #hero-text {
-    width: 50%;
+    width: 100%;
     min-height: 100vh;
     text-align: center;
+    /* justify-content: center; */
 }
 
 #hero-text h1 {
     font-size: clamp(3rem, 6vw, 7rem);
     font-weight: 500;
-    max-width: 50%;
+    max-width: 80%;
     justify-content: center;
-    align-content: top;
     margin-top: 5rem;
-    margin-left: 8rem;
+    margin-left: 4rem;
 }
 
 .gallery {
@@ -116,6 +117,30 @@ main {
 
 .gallery img {
     height: auto;
+}
+
+.presentation {
+    display: grid;
+    margin: 5rem auto;
+    min-height: 20vh;
+    max-width: 90%;
+    background-color: rgba(51,51,51, 30%);
+    border: 3px solid #ccc;
+    border-radius: 1rem;
+    padding: 20px
+}
+
+.presentation h2 {
+    font-size: 1.4rem;
+}
+
+.presentation p {
+    font-size: 1.3rem;
+}
+
+.presentation img {
+    width: 25%;
+    margin: 1rem;
 }
 
 footer {
@@ -154,8 +179,26 @@ footer figure img {
 /* ------------------------- Tablet ---------------------------- */
 
 @media (min-width: 640px) {
+
+    #logo {
+        scale: 60%
+    }
+
     nav {
         display: none;
+    }
+
+    #hero-text {
+        width: 50%;
+    }
+
+    #hero-text h1 {
+        font-size: clamp(3rem, 6vw, 7rem);
+        font-weight: 500;
+        max-width: 50%;
+        justify-content: center;
+        margin-top: 5rem;
+        margin-left: 8rem;
     }
 
     .gallery img {
@@ -168,16 +211,21 @@ footer figure img {
 /* ------------------------- Desktop ---------------------------- */
 
 @media (width > 1240px) {
-    .gallery img {
-        width: 30%;
-    }
-
     nav {
         display: block;
+    }
+    
+    #hero-text h1 {
+        margin-left: 16rem;
+    }
+
+    .gallery img {
+        width: 30%;
     }
 
     .instagram {
         scale: 110%;
     }
+
 
 }
