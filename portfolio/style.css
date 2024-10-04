@@ -179,7 +179,7 @@ footer figure img {
 @media (min-width: 640px) {
 
     #logo {
-        scale: 60%
+        transform: scale(0.6);
     }
 
     nav {
@@ -232,7 +232,7 @@ footer figure img {
     }
 
     .instagram {
-        scale: 110%;
+        transform: scale(1.1);
     }
 
 
