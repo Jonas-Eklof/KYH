@@ -64,7 +64,7 @@ header {
 }
 
 #logo {
-    scale: 40%
+    transform: scale(1);
 }
 
 nav {
@@ -149,7 +149,7 @@ footer {
 }
 
 .footer-logo {
-    scale: 40%;
+    transform: scale(0.4);
 }
 
 footer nav ul {
