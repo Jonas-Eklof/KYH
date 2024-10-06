@@ -64,7 +64,7 @@ header {
 }
 
 #logo {
-    transform: scale(1);
+    transform: scale(0.6);
 }
 
 nav {
@@ -196,7 +196,7 @@ footer figure img {
         max-width: 50%;
         justify-content: center;
         margin-top: 5rem;
-        margin-left: 8rem;
+        margin-left: auto;
     }
     
     .presentation {
@@ -214,6 +214,11 @@ footer figure img {
 /* ------------------------- Desktop ---------------------------- */
 
 @media (width > 1240px) {
+
+    #logo {
+        transform: scale(0.8);
+    }
+
     nav {
         display: block;
     }
