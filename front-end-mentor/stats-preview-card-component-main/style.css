@@ -99,7 +99,9 @@ main h1 {
 
 .main-paragraph {
     color: var(--less-transparent-white);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.2rem;
+    font-size: 0.8rem;
+    line-height: 1.6;
 }
 
 span.stat-group {
@@ -114,6 +116,7 @@ span.stat-group {
     font-size: 8px;
     letter-spacing: 1px;
     font-weight: 300;
+    margin-top: .3rem;
 }
 
 
