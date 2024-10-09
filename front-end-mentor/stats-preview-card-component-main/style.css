@@ -121,13 +121,50 @@ span.stat-group {
 
 
 @media screen and (width > 1440px) {
+
+    h1.main-heading {
+        font-size: 2rem;
+    }
+
     main img {
         background-image: url("images/image-header-desktop.jpg");
+        height: 100%;
+        
     }
 
     main {
-        display: grid;
-        grid-auto-flow: row;
+        display: flex;
+        flex-direction: row;
+        max-width: 80rem;
+    }
+
+    main img {
+        border-radius: 10px 0 0 10px;
+        margin-bottom: 0;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-paragraph {
+        font-size: .8rem;
+        width: 60%;
+    }
+
+    p.main-heading {
+        font-size: 1.3rem;
+    }
+    p.stat-heading {
+        font-size: 0.9rem;
+    }
+
+    .img-wrapper {
+        height: 100%;
+        border-bottom-left-radius: 10px;
+        margin-bottom: 0;
     }
     
 }
