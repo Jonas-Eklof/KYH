@@ -174,6 +174,10 @@ footer {
 .socials {
     display: flex;
     justify-content: space-around;
-    margin-inline: 4rem;
+    margin-inline: 5rem;
     margin-top: 3rem;
+}
+
+ul.socials a:hover {
+    fill: var(--primary-strong-cyan);
 }
