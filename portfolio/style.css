@@ -163,6 +163,11 @@ header nav ul li {
   max-height: 240px;
 }
 
+.hamburger #menu-btn:checked ~ .menu-icon {
+  background-color: #333;
+  margin-bottom: -5px;
+}
+
 .hamburger #menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
 }
@@ -269,7 +274,7 @@ footer figure img {
 
 /* ------------------------- Tablet ---------------------------- */
 
-@media (min-width: 640px) {
+@media (min-width: 40em) {
   #logo {
     transform: scale(0.6);
   }
@@ -306,7 +311,7 @@ footer figure img {
 
 /* ------------------------- Desktop ---------------------------- */
 
-@media (width > 1240px) {
+@media (width > 77.5em) {
   #logo {
     transform: scale(0.8);
   }
