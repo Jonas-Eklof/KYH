@@ -68,11 +68,13 @@ nav {
 
 nav a {
   color: #fff;
-  text-decoration: none;
+  text-decoration: none; /* Ingen understrykning från början */
+  transition: text-decoration-color 0.3s ease; /* Övergång för understrykningens färg */
 }
 
 nav a:hover {
   text-decoration: underline;
+  text-decoration-color: #fff; /* Behåll samma färg som texten */
 }
 
 header nav ul li {
