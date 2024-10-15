@@ -163,6 +163,10 @@ header nav ul li {
   max-height: 240px;
 }
 
+.hamburger #menu-btn ~ .menu-icon {
+  margin-bottom: -5px;
+}
+
 .hamburger #menu-btn:checked ~ .menu-icon {
   background-color: #333;
   margin-bottom: -5px;
