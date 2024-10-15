@@ -235,11 +235,17 @@ main {
 }
 
 .presentation h2 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .presentation p {
   font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.presentation .text p {
+  margin-bottom: 0.5rem;
 }
 
 footer {
@@ -337,6 +343,10 @@ footer figure img {
 
   .presentation {
     grid-template-columns: 3fr 1fr;
+  }
+
+  .presentation p {
+    padding-right: 2rem;
   }
 
   .instagram {
