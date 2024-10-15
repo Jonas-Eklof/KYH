@@ -68,13 +68,11 @@ nav {
 
 nav a {
   color: #fff;
-  text-decoration: none; /* Ingen understrykning från början */
-  transition: text-decoration-color 0.3s ease; /* Övergång för understrykningens färg */
+  text-decoration: none;
 }
 
 nav a:hover {
   text-decoration: underline;
-  text-decoration-color: #fff; /* Behåll samma färg som texten */
 }
 
 header nav ul li {
@@ -202,7 +200,6 @@ main {
   width: 100%;
   min-height: 100vh;
   text-align: center;
-  /* justify-content: center; */
 }
 
 #hero-text h1 {
