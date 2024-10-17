@@ -1,0 +1,21 @@
+/* Use the variables */
+body {
+  background-color: lightblue;
+  color: darkblue;
+  font-size: 18px;
+}
+
+nav {
+  width: 80%;
+  padding: 2rem;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  margin: 1.5rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

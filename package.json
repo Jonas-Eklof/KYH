@@ -1,0 +1,27 @@
+{
+  "name": "ovningar",
+  "version": "1.0.0",
+  "description": "och jag går en utbildning för att bli en Frontendutvecklare, så tanken är att jag kommer att ladda upp alla uppgifter här - från början till slut.",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "watch:sass": "sass test/style.scss ./src/style.css",
+    "watch:tailwind": "npx tailwindcss -i ./src/style.css -o ./src/style.css --minify --watch",
+    "build": "npm run watch:sass && npm run watch:tailwind"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonas-Eklof/KYH.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonas-Eklof/KYH/issues"
+  },
+  "homepage": "https://github.com/Jonas-Eklof/KYH#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  },
+  "dependencies": {
+    "sass": "^1.80.1"
+  }
+}
