@@ -1,0 +1,16 @@
+# Ignorera node_modules
+node_modules/
+
+# Ignorera byggmappen
+dist/
+build/
+
+# Ignorera miljövariabler
+.env
+
+# Ignorera loggfiler
+*.log
+
+# Ignorera operativsystemspecifika filer
+.DS_Store
+Thumbs.db
