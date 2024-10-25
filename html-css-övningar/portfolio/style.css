@@ -1,0 +1,381 @@
+/* -------------------- Beginning of Reset ------------------------ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  list-style: none;
+}
+
+html {
+  color-scheme: dark light;
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+@media (prefers-reduce-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+  }
+}
+/* -------------------- End of Reset ------------------------ */
+
+body {
+  background-color: #000;
+  font-family: Inter, sans-serif;
+  background-image: url(bg.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 70%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#logo {
+  transform: scale(0.6);
+}
+
+.desktop-menu {
+  font-size: 1.3rem;
+  align-content: center;
+  display: none;
+  position: relative;
+}
+
+.desktop-menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.desktop-menu a:hover {
+  text-decoration: underline;
+}
+
+header .desktop-menu ul li {
+  display: inline;
+  margin-left: 5rem;
+}
+
+/* ------------------------- Hamburger menu ----------------------------- */
+
+.desktop-menu {
+  display: none;
+}
+
+.hamburger ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #333;
+  min-width: 30%;
+  position: absolute;
+  right: 2px;
+}
+
+.hamburger li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  color: #fff;
+  text-decoration: none;
+}
+
+.hamburger li a:hover,
+.hamburger .menu-btn:hover {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* menu */
+
+.hamburger .menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out; /* Smooth transition */
+}
+
+/* menu icon */
+
+.hamburger .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.hamburger .menu-icon .navicon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.hamburger .menu-icon .navicon:before,
+.hamburger .menu-icon .navicon:after {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.hamburger .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.hamburger .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.hamburger #menu-btn {
+  display: none;
+}
+
+.hamburger #menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.hamburger #menu-btn ~ .menu-icon {
+  margin-bottom: -5px;
+}
+
+.hamburger #menu-btn:checked ~ .menu-icon {
+  background-color: #333;
+  margin-bottom: -5px;
+}
+
+.hamburger #menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.hamburger #menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.hamburger #menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.hamburger #menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.hamburger #menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* ------------------------- End Hamburger menu ----------------------------- */
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#hero-text {
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+}
+
+#hero-text h1 {
+  font-size: clamp(3rem, 6vw, 7rem);
+  font-weight: 500;
+  max-width: 80%;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-left: 4rem;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.gallery img {
+  height: auto;
+}
+
+.presentation {
+  display: grid;
+  margin: 5rem auto;
+  max-width: 90%;
+  background-color: rgba(51, 51, 51, 30%);
+  border: 3px solid #ccc;
+  border-radius: 1rem;
+  padding: 20px;
+  gap: 20px;
+}
+
+.presentation h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.presentation p {
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.presentation .text p {
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  transform: scale(0.4);
+}
+
+.footer-nav {
+  display: none;
+}
+
+footer nav ul {
+  margin-left: -9rem;
+}
+
+footer nav ul li {
+  display: inline;
+  margin: 0 0.5rem;
+}
+
+footer figure img {
+  display: inline;
+  margin-left: 1rem;
+}
+
+.instagram {
+  width: 25%;
+}
+
+.linkedin {
+  width: 25%;
+}
+
+/* ------------------------- Tablet ---------------------------- */
+
+@media (min-width: 40em) {
+  #logo {
+    transform: scale(0.6);
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger ul {
+    min-width: 20%;
+  }
+
+  #hero-text {
+    width: 50%;
+  }
+
+  #hero-text h1 {
+    font-size: clamp(3rem, 6vw, 7rem);
+    font-weight: 500;
+    max-width: 50%;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-left: auto;
+  }
+
+  .presentation {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .gallery img {
+    width: 45%;
+  }
+
+  /* ------------------------- Desktop ---------------------------- */
+
+  @media (width > 77.5em) {
+    #logo {
+      transform: scale(0.8);
+    }
+
+    .desktop-menu {
+      display: block;
+    }
+
+    .hamburger {
+      display: none;
+    }
+
+    #hero-text h1 {
+      margin-left: 16rem;
+    }
+
+    .gallery img {
+      width: 30%;
+    }
+
+    .presentation {
+      grid-template-columns: 3fr 1fr;
+    }
+
+    .presentation p {
+      padding-right: 2rem;
+    }
+
+    .footer-nav {
+      display: inline;
+    }
+
+    .footer-nav ul li:not(:last-child) {
+      margin-right: 3rem;
+    }
+
+    .footer-nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-nav ul li a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .instagram {
+      transform: scale(1.1);
+    }
+  }
+}
