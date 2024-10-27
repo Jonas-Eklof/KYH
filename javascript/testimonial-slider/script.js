@@ -1,3 +1,4 @@
+// En array med testimonial-objekt som innehåller namn, bild-URL och text.
 const testimonials = [
   {
     name: "Cherise G",
@@ -19,23 +20,35 @@ const testimonials = [
   },
 ];
 
-const imgEl = document.querySelector("img");
-const textEl = document.querySelector(".text");
-const usernameEl = document.querySelector(".username");
+// Hämtar bild-, text- och användarnamnselement från DOM:en.
+const imgEl = document.querySelector("img"); // Bilden där användarens foto ska visas
+const textEl = document.querySelector(".text"); // Textområdet där testimonial-texten visas
+const usernameEl = document.querySelector(".username"); // Namn som visar vem som lämnat testimonial
 
+// Initierar en variabel för att hålla reda på aktuell testimonial.
 let idx = 0;
 
+// Funktion som uppdaterar testimonial-innehållet på sidan.
 updateTestimonial();
 
 function updateTestimonial() {
+  // Destrukturerar aktuella värden (namn, bild-URL och text) från testimonial-objektet.
   const { name, photoUrl, text } = testimonials[idx];
-  imgEl.src = photoUrl;
-  textEl.innerText = text;
-  usernameEl.innerText = name;
+
+  // Uppdaterar innehållet i DOM-elementen med data från testimonials.
+  imgEl.src = photoUrl; // Sätter bildens källa till den aktuella bildens URL.
+  textEl.innerText = text; // Sätter texten till testimonial-texten.
+  usernameEl.innerText = name; // Sätter användarnamnet till den aktuella användarens namn.
+
+  // Ökar indexet för att gå vidare till nästa testimonial.
   idx++;
+
+  // Om indexet är lika med längden av arrayen, sätts det tillbaka till 0 (startar om från början).
   if (idx === testimonials.length) {
     idx = 0;
   }
+
+  // Sätter en timer på 10 sekunder innan nästa testimonial visas.
   setTimeout(() => {
     updateTestimonial();
   }, 10000);
