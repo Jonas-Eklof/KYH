@@ -15,5 +15,8 @@ console.log(greeting);
 
 console.log(typeof (5 || 8));
 
-let name = prompt("What is your name?");
-console.log(name);
+// const name = prompt("What is your name?");
+// console.log("Hello " + name);
+
+const name = prompt("What is your name?");
+console.log(`Hello ${name}`);
