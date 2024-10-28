@@ -41,7 +41,6 @@ function getAge(birthdayValue) {
   ) {
     age--;
   }
-
   // Returnerar den beräknade åldern
   return age;
 }
