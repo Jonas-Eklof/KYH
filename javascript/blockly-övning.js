@@ -47,3 +47,8 @@ if (villkor == true) {
 } else {
   console.log("villkoret är falskt");
 }
+
+let längd = 122;
+if ((längd) => 130) {
+  console.log("Du får åka Balder!");
+}
