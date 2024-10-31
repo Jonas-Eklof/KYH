@@ -1,0 +1,25 @@
+START
+
+FUNCTION named diceGame
+    SET goal to [1, 2, 3, 4, 5, 6] // Målsekvens som behövs för att vinna
+    SET currentSequence to empty list // En lista för att hålla reda på vilka siffror som har kastats i rätt ordning
+    SET rollCount to 0 // Räknare för antal kast
+
+    LOOP until currentSequence matches goal
+        INCREMENT rollCount by 1
+        SET roll to RANDOM 1 to 6 // Slumpa ett tal mellan 1 och 6
+
+        IF roll is next number in goal sequence (goal[currentSequence.length])
+            ADD roll to currentSequence // Lägger till talet om det är i rätt ordning
+        ELSE
+            RESET currentSequence to empty list // Om fel tal kastas, starta om sekvensen
+        ENDIF
+
+    ENDLOOP
+
+    OUTPUT "You reached the goal in", rollCount, "rolls!"
+ENDFUNCTION
+
+CALL FUNCTION named diceGame
+
+END
