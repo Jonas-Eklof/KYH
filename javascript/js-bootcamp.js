@@ -193,14 +193,50 @@
 //   console.log("Ogiltig månad");
 // }
 
-function sum(a, b) {
-  return a + b;
-}
+// function sum(a, b) {
+//   return a + b;
+// }
 
-console.log(sum(1, 5));
+// console.log(sum(1, 5));
 
-const summa = (x, y) => {
-  return x + y;
-};
+// const summa = (x, y) => {
+//   return x + y;
+// };
 
-console.log(summa(5, 8));
+// console.log(summa(5, 8));
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// const oddNumbers = numbers.filter(number => number % 2 !== 0);
+
+// console.log(oddNumbers);
+
+// const strings = ["äpple", "banan", "päron", "kiwi"]
+
+// const reversed = strings.map(str => str.split('').reverse().join(''));
+
+// console.log(reversed);
+
+// let people = [
+//   { age: 10, name: "Gun-Britt" },
+//   { age: 20, name: "Conny" },
+//   { age: 30, name: "Aurora" },
+//   { age: 40, name: "Kalle" },
+//   { age: 55, name: "Max" },
+// ];
+
+// const totalÅlder = people.reduce((acc, person) => acc + person.age, 0);
+
+// console.log(totalÅlder);
+
+let numbers = [2, 3, 1, 5, 4, 10, 8, 7, 9, 6];
+
+const maxTal = numbers.reduce((max, current) => {
+  return current > max ? current : max;
+}, 0);
+
+console.log(maxTal);
+
+let as = "cfvgbhnj";
+
+console.log(as.length);
