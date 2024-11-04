@@ -36,30 +36,30 @@
 
 // ------------------ Arrays
 
-let frukter = ["äpple", "päron", "banan", "kiwi", "mango"];
+// let frukter = ["äpple", "päron", "banan", "kiwi", "mango"];
 
-let lista = ["ett", 2, ["underlista"]];
+// let lista = ["ett", 2, ["underlista"]];
 
-let animals = ["cat", "hamster", "parrot", "funky chihuahua"];
+// let animals = ["cat", "hamster", "parrot", "funky chihuahua"];
 
-console.log(animals.length);
-console.log(animals[0]);
-console.log(animals[3]);
-animals[1] = "tiger";
-console.log(animals);
+// console.log(animals.length);
+// console.log(animals[0]);
+// console.log(animals[3]);
+// animals[1] = "tiger";
+// console.log(animals);
 
-let a = [1, 2, 3, 7, 8, 9];
-let b = [4, 5, 6];
+// let a = [1, 2, 3, 7, 8, 9];
+// let b = [4, 5, 6];
 
-a.splice(3, 0, ...b);
-console.log(a);
+// a.splice(3, 0, ...b);
+// console.log(a);
 
-let arr = ["a", "b", "c"];
+// let arr = ["a", "b", "c"];
 
-// let clone = arr.concat();
-// let clone = arr;
-let clone = Array.from(arr);
-console.log(clone);
+// // let clone = arr.concat();
+// // let clone = arr;
+// let clone = Array.from(arr);
+// console.log(clone);
 
 // ------------------------ Loops
 
@@ -87,3 +87,120 @@ console.log(clone);
 // things.forEach(function(thing, index) {
 //   console.log(thing + ' ' + index);
 // });
+
+// let i = 0;
+// while (i < 1000) {
+//   i++;
+//   console.log(i);
+// }
+
+// let x = 1, y = 0;
+// while (x <= 10) {
+//   y = y + x;
+//   x = x + 1;
+// };
+// console.log("y är: ", y);
+
+// let fruits = ['apelsin', 'päron', 'äpple', 'kiwi'];
+
+// for (let fruit of fruits) {
+//   console.log(fruit);
+
+// }
+
+// ---------- Level up - Loops
+
+// let suits = ['hjärter', 'spader', 'ruter', 'klöver'];
+// let values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+
+// let deck = [];
+
+// suits.forEach(suite => {
+//   values.forEach(value => {
+//     // deck.push(suite + ' ' + value)
+//     deck.push(`${suite} ${value}`);
+//   });
+// });
+
+// console.log(deck);
+
+// let friends = [
+//   {
+//     name: "Sixten",
+//     likes: ["bananas", "strawberries", "blueberries"],
+//   },
+//   {
+//     name: "Khalid",
+//     likes: ["papaya", "pear", "pineapple"],
+//   },
+//   {
+//     name: "Lisa",
+//     likes: ["raspberries", "watermelon", "apple"],
+//   },
+// ];
+
+// friends.forEach((friend) => {
+//   console.log(`${friend.name} gillar: `);
+//   friend.likes.forEach((fruit) => {
+//     console.log(fruit);
+//   });
+//   console.log("----");
+// });
+
+// let condition = true;
+
+// if (condition) {
+//   console.log("Sant");
+// } else {
+//   console.log("Falskt");
+// }
+
+// let length = 144
+// if (length >= 130) {
+//   console.log('Du får åka Balder!');
+// }
+
+// let month = {
+//   1: "januari",
+//   2: "februari",
+//   3: "mars",
+//   4: "april",
+//   5: "maj",
+//   6: "juni",
+//   7: "juli",
+//   8: "augusti",
+//   9: "september",
+//   10: "oktober",
+//   11: "november",
+//   12: "december",
+// };
+
+// let currentMonth = new Date().getMonth() + 1;
+
+//   console.log(`Månaden är ${month[currentMonth]}`);
+
+// let month = 10;
+
+// if (month >= 9 && month <= 11) {
+//   console.log("Årstiden är: höst");
+// } else if (month >= 3 && month <= 5) {
+//   console.log("Årstiden är: vår");
+// } else if (month >= 6 && month <= 8) {
+//   console.log("Årstiden är: sommar");
+// } else if (month === 12 || month === 1 || month === 2) {
+//   console.log("Årstiden är: vinter");
+// } else {
+//   console.log("Ogiltig månad");
+// }
+
+function sum(a, b) {
+  return a + b;
+}
+
+console.log(sum(1, 5));
+
+const summa = (x, y) => {
+  return x + y;
+};
+
+console.log(summa(5, 8));
