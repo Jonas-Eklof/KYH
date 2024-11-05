@@ -147,6 +147,10 @@
 //   console.log("----");
 // });
 
+//
+// --- If...Else
+//
+
 // let condition = true;
 
 // if (condition) {
@@ -193,6 +197,10 @@
 //   console.log("Ogiltig månad");
 // }
 
+//
+// --- Functions
+//
+
 // function sum(a, b) {
 //   return a + b;
 // }
@@ -217,6 +225,10 @@
 
 // console.log(reversed);
 
+//
+// --- 10. Reduce()
+//
+
 // let people = [
 //   { age: 10, name: "Gun-Britt" },
 //   { age: 20, name: "Conny" },
@@ -236,6 +248,10 @@
 // }, 0);
 
 // console.log(maxTal);
+
+//
+// --- 14. Skriv din egen HOF (High Order Function)
+//
 
 // function executeGreeting(callback) {
 //   console.log("Calling the callback-function:");
