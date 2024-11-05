@@ -229,14 +229,67 @@
 
 // console.log(totalÅlder);
 
-let numbers = [2, 3, 1, 5, 4, 10, 8, 7, 9, 6];
+// let numbers = [2, 3, 1, 5, 4, 10, 8, 7, 9, 6];
 
-const maxTal = numbers.reduce((max, current) => {
-  return current > max ? current : max;
-}, 0);
+// const maxTal = numbers.reduce((max, current) => {
+//   return current > max ? current : max;
+// }, 0);
 
-console.log(maxTal);
+// console.log(maxTal);
 
-let as = "cfvgbhnj";
+// function executeGreeting(callback) {
+//   console.log("Calling the callback-function:");
+//   callback();
+// }
 
-console.log(as.length);
+// function greeting() {
+//   console.log("Greetings from within the callback-function");
+// }
+
+// executeGreeting(greeting);
+
+//
+// --- Level up
+//
+
+const countries = [
+  { name: "Sweden", continent: "Europe" },
+  { name: "Nigeria", continent: "Africa" },
+  { name: "Brazil", continent: "South America" },
+  { name: "Japan", continent: "Asia" },
+  { name: "Australia", continent: "Australia" },
+  { name: "United States", continent: "North America" },
+  { name: "New Zealand", continent: "Oceania" },
+  { name: "Antarctica", continent: "Antarctica" },
+];
+
+console.log("Alla länder:");
+countries.forEach((country) => console.log(country.name));
+
+console.log("Alla kontinenter");
+countries.forEach((continent) => console.log(continent.continent));
+
+console.log("Alla länder i Europa:");
+const europeanCountries = countries.filter(
+  (country) => country.continent === "Europe"
+);
+europeanCountries.forEach((country) => console.log(country.name));
+
+function search(query) {
+  const results = countries.filter(
+    (country) =>
+      country.name.toLowerCase() === query.toLowerCase() ||
+      country.continent.toLowerCase() === query.toLowerCase()
+  );
+
+  if (results.length > 0) {
+    console.log(`\nSökresultat för "${query}":`);
+    results.forEach((country) =>
+      console.log(`${country.name} - ${country.continent}`)
+    );
+  } else {
+    console.log(`\nInga resultat hittades för "${query}":`);
+  }
+}
+
+search("Europe");
