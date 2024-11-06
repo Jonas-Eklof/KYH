@@ -19,4 +19,4 @@ flowers.forEach((flower) => {
   }
 });
 
-console.log(counter);
+console.table(counter);

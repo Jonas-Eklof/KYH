@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,15 +20,15 @@
   <body>
     <header id="hem">
       <a href="#hem"><img src="logo.png" alt="logo" id="logo" /></a>
-      <nav class="desktop-menu">
-        <ul>
-          <li><a href="#hem">Hem</a></li>
-          <li><a href="#galleri">Galleri</a></li>
-          <li><a href="#ommig">Om mig</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
-      </nav>
       <nav>
+        <div class="desktop-menu">
+          <ul>
+            <li><a href="#hem">Hem</a></li>
+            <li><a href="#galleri">Galleri</a></li>
+            <li><a href="#ommig">Om mig</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
         <div class="hamburger">
           <input type="checkbox" class="menu-icon" id="menu-btn" />
           <label for="menu-btn" class="menu-icon">
@@ -43,6 +43,7 @@
         </div>
       </nav>
     </header>
+
     <main>
       <section id="hero-text">
         <h1>A moment frozen in time</h1>
@@ -108,5 +109,16 @@
         /></a>
       </figure>
     </footer>
+
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img id="modalImage" class="modal-content" />
+      <div class="modal-nav">
+        <span id="prevImage" class="nav-arrow">&#10094;</span>
+        <span id="nextImage" class="nav-arrow">&#10095;</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
