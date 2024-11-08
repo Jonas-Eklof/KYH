@@ -60,3 +60,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+function filterGallery(category) {
+  const images = document.querySelectorAll(".gallery img");
+
+  // Sortering av bilderna i galleriet
+  images.forEach((img) => {
+    if (category === "all" || img.classList.contains(category)) {
+      img.style.display = "block";
+    } else {
+      img.style.display = "none";
+    }
+  });
+
+  const buttons = document.querySelectorAll(".filter-buttons button");
+  buttons.forEach((button) => button.classList.remove("active")); // Tar bort "active"-klassen från alla knappar
+
+  // Lägg till "active"-klassen på den knapp som klickas på
+  const activeButton = document.querySelector(
+    `button[onclick="filterGallery('${category}')"]`
+  );
+  activeButton.classList.add("active");
+}
