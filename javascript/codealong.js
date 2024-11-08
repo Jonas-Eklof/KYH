@@ -20,3 +20,15 @@ flowers.forEach((flower) => {
 });
 
 console.table(counter);
+
+function add(x, y) {
+  return x + y;
+}
+
+console.log(add(5, 10));
+
+const adding = (x, y) => {
+  return x + y;
+};
+
+console.log(adding(5, 10));
