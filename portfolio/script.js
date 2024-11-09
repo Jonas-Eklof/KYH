@@ -4,18 +4,47 @@ document.addEventListener("DOMContentLoaded", () => {
   const galleryImages = document.querySelectorAll(".gallery img");
   let currentIndex;
 
+  // Funktion för att öppna modalen
+  function openModal(index) {
+    currentIndex = index;
+    modalImage.src = galleryImages[currentIndex].src;
+    modal.classList.add("open");
+    document.addEventListener("keydown", handleKeyDown); // Lägg till keydown-händelsen
+  }
+
+  // Funktion för att stänga modalen
+  function closeModal() {
+    modal.classList.remove("open");
+    document.removeEventListener("keydown", handleKeyDown); // Ta bort keydown-händelsen
+  }
+
+  // Hantera tangenttryckningar
+  function handleKeyDown(event) {
+    if (event.key === "Escape") {
+      closeModal();
+    } else if (event.key === "ArrowLeft") {
+      currentIndex =
+        (currentIndex - 1 + galleryImages.length) % galleryImages.length; // Gör så att den undviker att hamna på ett negativt värde, och med modulo-operatorn (%) så gör det att modalen loopar och inte stoppar på sista bilden.
+      modalImage.src = galleryImages[currentIndex].src;
+    } else if (event.key === "ArrowRight") {
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      modalImage.src = galleryImages[currentIndex].src;
+    }
+  }
+
   // Öppna modal och visa bild som klickas på
   galleryImages.forEach((img, index) => {
-    img.addEventListener("click", () => {
-      currentIndex = index;
-      modalImage.src = img.src;
-      modal.style.display = "block";
-    });
+    img.addEventListener("click", () => openModal(index));
   });
 
-  // Stäng modal
-  document.querySelector(".close").addEventListener("click", () => {
-    modal.style.display = "none";
+  // Stäng modal när man klickar på stäng-knappen
+  document.querySelector(".close").addEventListener("click", closeModal);
+
+  // Stäng modal när man klickar utanför bilden
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
   });
 
   // Bläddra till föregående bild
@@ -30,35 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
     currentIndex = (currentIndex + 1) % galleryImages.length;
     modalImage.src = galleryImages[currentIndex].src;
   });
-
-  // Stäng ner modal när man klickar utanför bilden
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  });
-
-  // Bläddra med piltangenterna
-  document.addEventListener("keydown", (event) => {
-    if (modal.style.display === "block") {
-      if (event.key === "ArrowLeft") {
-        // Föregående bild
-        currentIndex =
-          (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-        if (currentIndex < 0) {
-          currentIntex = galleryImages.length - 1;
-        }
-        modalImage.src = galleryImages[currentIndex].src;
-      } else if (event.key === "ArrowRight") {
-        // Nästa bild
-        currentIndex = (currentIndex + 1) % galleryImages.length;
-        modalImage.src = galleryImages[currentIndex].src;
-      } else if (event.key === "Escape") {
-        // Stäng ned modalen med Escape
-        modal.style.display = "none";
-      }
-    }
-  });
 });
 
 function filterGallery(category) {
@@ -66,6 +66,7 @@ function filterGallery(category) {
 
   // Sortering av bilderna i galleriet
   images.forEach((img) => {
+    // Kollar om kategorin "Alla" är vald, kollar annars om bilden har en class som tillhör vald kategori
     if (category === "all" || img.classList.contains(category)) {
       img.style.display = "block";
     } else {

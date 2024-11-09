@@ -218,6 +218,7 @@ main {
 .filter-buttons {
   max-width: 600px;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   margin-inline: auto;
   margin-bottom: 2rem;
@@ -241,6 +242,8 @@ main {
 .filter-buttons .active {
   background-color: #555;
   color: #fff;
+  border: 1px solid #aaa;
+  padding: 9px 14px;
 }
 
 .gallery {
@@ -284,6 +287,60 @@ main {
 
 .presentation .text p {
   margin-bottom: 0.5rem;
+}
+
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.contact-me img {
+  transform: rotate(-25deg);
+  margin-top: 3rem;
+  height: 100%;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form input {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  max-width: 100%;
+  align-self: flex-start;
+  min-width: 100%;
+}
+
+.contact-form label {
+  align-self: flex-start;
+}
+
+.contact-form #message {
+  max-width: 100%;
+  min-width: 100%;
+  align-self: flex-start;
+  min-height: 9rem;
+}
+
+.submit-button {
+  padding: 0.7rem;
+  margin-top: 1rem;
+  background-color: #333;
+  border: none;
+}
+
+.submit-button:hover {
+  background-color: #555;
+  cursor: pointer;
 }
 
 footer {
@@ -359,6 +416,27 @@ footer figure img {
     width: 45%;
   }
 
+  .contact-me {
+    flex-direction: row;
+    max-width: 1000px;
+    justify-content: space-between;
+  }
+
+  .contact-form {
+    min-width: 45%;
+  }
+  .contact-form input {
+    min-width: 100%;
+  }
+
+  .contact-me img {
+    margin-left: 3rem;
+  }
+
+  .filter-buttons {
+    flex-direction: row;
+  }
+
   /* ------------------------- Desktop ---------------------------- */
 
   @media (width > 77.5em) {
@@ -428,13 +506,25 @@ footer figure img {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
+.modal.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .modal-content {
-  margin-top: 2%;
-  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 90%;
   max-height: 90%;
   width: auto;
   height: auto;
+}
+
+.modal-content img {
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .close {

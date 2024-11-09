@@ -49,13 +49,13 @@
         <h1>A moment frozen in time</h1>
       </section>
 
-      <div class="filter-buttons">
+      <div class="filter-buttons" id="galleri">
         <button onclick="filterGallery('all')">Alla</button>
         <button onclick="filterGallery('portrait')">Porträtt</button>
         <button onclick="filterGallery('animal')">Djur</button>
         <button onclick="filterGallery('nature')">Natur</button>
       </div>
-      <section class="gallery" id="galleri">
+      <section class="gallery">
         <img src="img/angelica1.jpg" class="portrait" alt="" />
         <img src="img/anna1.jpg" class="portrait" alt="" />
         <img src="img/leafdrop.jpg" class="nature" alt="" />
@@ -91,6 +91,19 @@
         <div class="press-bild">
           <img src="img/meself.jpg" alt="" />
         </div>
+      </section>
+
+      <section class="contact-me" id="kontakt">
+        <form action="" class="contact-form">
+          <label for="name">Ditt namn:</label>
+          <input type="text" placeholder="Namn" id="name" />
+          <label for="email">Din e-mail:</label>
+          <input type="text" placeholder="Email" id="email" />
+          <label for="message">Skriv ditt meddelande här:</label>
+          <textarea name="message" id="message"></textarea>
+          <button class="submit-button" type="submit">Skicka meddelande</button>
+        </form>
+        <img src="email-vector-aimade-removebg.png" alt="" />
       </section>
     </main>
 
