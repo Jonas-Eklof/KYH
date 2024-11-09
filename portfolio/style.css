@@ -47,6 +47,25 @@ body {
   background-size: 70%;
 }
 
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 1;
+  animation: fadeOverlay 5s forwards;
+  z-index: -1;
+}
+
+@keyframes fadeOverlay {
+  to {
+    opacity: 0;
+  }
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -204,6 +223,7 @@ main {
   width: 100%;
   min-height: 100vh;
   text-align: center;
+  animation: fade 5s;
 }
 
 #hero-text h1 {
@@ -212,7 +232,7 @@ main {
   max-width: 80%;
   justify-content: center;
   margin-top: 5rem;
-  margin-left: 4rem;
+  margin-inline: auto;
 }
 
 .filter-buttons {
