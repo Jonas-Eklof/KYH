@@ -88,6 +88,7 @@ input {
 .done {
   background-color: #51df70 !important;
   color: #00891e;
+  text-decoration: line-through;
 }
 
 .delete {
