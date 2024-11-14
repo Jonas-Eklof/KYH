@@ -351,6 +351,31 @@ main {
   min-height: 9rem;
 }
 
+#message[placeholder] {
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+input:user-valid {
+  outline-color: green;
+}
+
+input:user-invalid {
+  outline-color: red;
+}
+
+input:not(:placeholder-shown):valid {
+  outline-color: green;
+}
+
+input:not(:placeholder-shown):invalid {
+  outline-color: red;
+}
+
+textarea:not(:placeholder-shown):invalid {
+  outline-color: red;
+}
+
 .submit-button {
   padding: 0.7rem;
   margin-top: 1rem;
