@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom manipulering med javascript</title>
+  </head>
+  <body>
+    <style>
+      .bold {
+        font-weight: bold;
+        font-size: 2rem;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        margin-inline: auto;
+      }
+
+      img {
+        max-width: 300px;
+        aspect-ratio: 1;
+      }
+    </style>
+    <h1 id="heading">Ändra denna text</h1>
+
+    <img src="" id="image" alt="" />
+
+    <a href="https://picsum.photos/" id="link"
+      >Detta är en länk till https://picsum.photos/</a
+    >
+
+    <button id="knapp">Klicka här för en Alert!</button>
+
+    <input type="text" id="input-field" />
+    <button id="input-button">Input Value</button>
+
+    <script src="dom-manipulering.js"></script>
+  </body>
+</html>
