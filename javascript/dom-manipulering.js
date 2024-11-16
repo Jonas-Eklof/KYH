@@ -13,7 +13,8 @@ div.classList.add("bold");
 div.classList.remove("bold");
 
 let list = document.createElement("ul");
-list.innerHTML = "<li>List item 1</li><li>List item 2</li>";
+list.innerHTML =
+  "<li>List item 1</li><li>List item 2</li><li>List item 3</li><li>List item 4</li>";
 
 document.body.appendChild(list);
 
@@ -38,3 +39,9 @@ inputKnapp.addEventListener("click", () => {
   p.innerText = inputField.value;
   document.body.appendChild(p);
 });
+
+let child = document.getElementById("child-1");
+
+console.log(child.parentNode);
+console.log(child.nextElementSibling);
+console.log(child.childNodes);

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bildkarusell</title>
+    <link rel="stylesheet" href="bildkarusell.css" />
+  </head>
+  <body>
+    <section class="bildkarusell-container">
+      <h1>Bildkarusell</h1>
+      <div class="bild-container">
+        <img src="https://picsum.photos/1000/502/" alt="" />
+        <img src="https://picsum.photos/1000/501/" alt="" />
+        <img src="https://picsum.photos/1000/500/" alt="" />
+        <img src="https://picsum.photos/1000/499/" alt="" />
+        <img src="https://picsum.photos/1000/498/" alt="" />
+      </div>
+
+      <button class="prev" onclick="bytBild(-1)">&#10094; Förra</button>
+      <button class="next" onclick="bytBild(1)">Nästa &#10095;</button>
+    </section>
+
+    <script src="bildkarusell.js"></script>
+  </body>
+</html>
