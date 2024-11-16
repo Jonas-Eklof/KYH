@@ -10,8 +10,7 @@ function aktuellBild(n) {
   bildkarusell((bildIndex = n));
 }
 
-function bildkarusell(n, no) {
-  let i;
+function bildkarusell(n) {
   let bilder = document.querySelectorAll("img");
   if (n > bilder.length) {
     bildIndex = 1;
@@ -19,8 +18,10 @@ function bildkarusell(n, no) {
   if (n < 1) {
     bildIndex = bilder.length;
   }
-  for (i = 0; i < bilder.length; i++) {
+  for (let i = 0; i < bilder.length; i++) {
     bilder[i].style.display = "none";
   }
+  let antal = document.getElementById("antal-bilder");
   bilder[bildIndex - 1].style.display = "block";
+  antal.textContent = `${bildIndex} / ${bilder.length}`;
 }
