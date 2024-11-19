@@ -45,3 +45,14 @@ let child = document.getElementById("child-1");
 console.log(child.parentNode);
 console.log(child.nextElementSibling);
 console.log(child.childNodes);
+
+const myInterval = setInterval(myTimer, 1000);
+
+function myTimer() {
+  const date = new Date();
+  document.querySelector(".clock").innerHTML = date.toLocaleTimeString();
+}
+
+function myStopFunction() {
+  clearInterval(myInterval);
+}
