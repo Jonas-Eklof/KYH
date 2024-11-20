@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-manipulation (event)</title>
+    <script src="dom-event.js" defer></script>
+  </head>
+  <body>
+    <style>
+      .active {
+        background-color: dodgerblue !important;
+        font-size: 1rem;
+        color: #fff !important;
+        font-weight: bold;
+      }
+      #article-button {
+        background-color: #ccc;
+        width: 200px;
+        aspect-ratio: 1;
+        color: black;
+      }
+
+      section {
+        width: 125px;
+        aspect-ratio: 1;
+        margin-bottom: 5px;
+      }
+    </style>
+    <h1>Ändrar detta "onload"</h1>
+    <article id="section"></article>
+    <button id="button">Lägg till item i listan</button>
+    <ul id="lista"></ul>
+
+    <button id="div-button">DIV-button</button>
+    <div class="divar"></div>
+    <div class="divar"></div>
+    <div class="divar"></div>
+    <div class="divar"></div>
+
+    <article>
+      <button id="article-button">Ändra class</button>
+    </article>
+
+    <button class="section-button">Section Button</button>
+    <section></section>
+    <section></section>
+    <section></section>
+
+    <button id="btn">Visa Child Nodes</button>
+    <div id="output"></div>
+    <ul id="list">
+      <li>Första elementet</li>
+      <li>Andra elementet</li>
+      <!-- Kommentar -->
+      <li>Tredje elementet</li>
+    </ul>
+  </body>
+</html>
