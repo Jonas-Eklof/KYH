@@ -12,7 +12,7 @@ function conlog() {
 
 // Uppgift 2
 
-const lista = [1, 2, 3, 4, 5, 6];
+const lista = [1, 2, 3, 4, 5, 6, 7, 8];
 
 function listarSiffror(callback) {
   console.log(callback);
@@ -44,3 +44,5 @@ function simulateAsyncOperations(value, callback) {
 simulateAsyncOperations("Hej", (value) => {
   console.log("*Efter två sekunders fördröjning*: " + value);
 });
+
+// Uppgift 5
