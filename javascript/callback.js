@@ -27,7 +27,7 @@ function processElements(arr, callback) {
   arr.forEach(callback);
 }
 
-function uppercase(element, index, array) {
+function uppercase(element, array) {
   console.log((array = element.toUpperCase()));
 }
 
