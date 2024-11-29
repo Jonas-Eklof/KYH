@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  font-family: "Secular One", sans-serif;
+  background: linear-gradient(90deg, #0c164d 0%, #190b22 100%);
+  color: white;
+  /* overflow: hidden; */
+}
+
+header {
+  text-align: right;
+  padding: 20px;
+}
+header h1 {
+  font-size: 60px;
+  margin: 0;
+  letter-spacing: 0.09em;
+}
+header p {
+  font-size: 24px;
+  margin: 0;
+  color: #ffd029;
+  letter-spacing: 0.6em;
+}
+
+.solar-system {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: -150px;
+}
+.solar-system .planet {
+  position: absolute;
+  border-radius: 50%;
+}
+.solar-system .sun {
+  width: 900px;
+  aspect-ratio: 1;
+  background: #ffd029;
+  box-shadow: 0 0 250px rgba(255, 208, 41, 0.5);
+  left: -700px;
+}
+.solar-system .mercury {
+  width: 14px;
+  height: 14px;
+  background: #888888;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+.solar-system .mercury h2 {
+  margin-left: -40px;
+}
+.solar-system .mercury:hover {
+  cursor: pointer;
+}
+.solar-system .mercury:hover h2 {
+  color: #190b22;
+  text-shadow: 0 0 5px #d8deed;
+}
+.solar-system .venus {
+  width: 26px;
+  height: 26px;
+  background: #e7cdcd;
+  top: 50%;
+  left: 32%;
+  transform: translate(-50%, -50%);
+}
+.solar-system .venus h2 {
+  margin-left: -20px;
+  margin-top: -40px;
+}
+.solar-system .venus:hover {
+  cursor: pointer;
+}
+.solar-system .venus:hover h2 {
+  color: #190b22;
+  text-shadow: 0 0 5px #d8deed;
+}
+.solar-system .earth {
+  width: 28px;
+  height: 28px;
+  background: #428ed5;
+  top: 50%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+}
+.solar-system .earth h2 {
+  margin-left: -15px;
+  margin-top: 30px;
+}
+.solar-system .earth:hover {
+  cursor: pointer;
+}
+.solar-system .earth:hover h2 {
+  color: #190b22;
+  text-shadow: 0 0 5px #d8deed;
+}
+.solar-system .mars {
+  width: 14px;
+  height: 14px;
+  background: #ef5f5f;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+.solar-system .mars h2 {
+  margin-left: -18px;
+}
+.solar-system .mars:hover {
+  cursor: pointer;
+}
+.solar-system .mars:hover h2 {
+  color: #190b22;
+  text-shadow: 0 0 5px #d8deed;
+}
+.solar-system .jupiter {
+  width: 188px;
+  height: 188px;
+  background: #e29468;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+.solar-system .jupiter h2 {
+  margin-left: 55px;
+  margin-top: -45px;
+}
+.solar-system .jupiter:hover {
+  cursor: pointer;
+}
+.solar-system .jupiter:hover h2 {
+  color: #190b22;
+  text-shadow: 0 0 5px #d8deed;
+}
+.solar-system .saturn {
+  width: 144px;
+  height: 144px;
+  background: #c7aa72;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+.solar-system .saturn h2 {
+  margin-left: 35px;
+  margin-top: -40px;
+}
+.solar-system .saturn:hover {
+  cursor: pointer;
+}
+.solar-system .saturn:hover h2 {
+  color: #190b22;
+  text-shadow: 0 0 5px #d8deed;
+}
+.solar-system .saturn-ring {
+  position: absolute;
+  width: 218px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  border-radius: 50%;
+}
+.solar-system .uranus {
+  width: 66px;
+  height: 66px;
+  background: #c9d4f1;
+  top: 50%;
+  left: 82%;
+  transform: translate(-50%, -50%);
+}
+.solar-system .uranus h2 {
+  margin-left: -10px;
+  margin-top: 70px;
+}
+.solar-system .uranus:hover {
+  cursor: pointer;
+}
+.solar-system .uranus:hover h2 {
+  color: #190b22;
+  text-shadow: 0 0 5px #d8deed;
+}
+.solar-system .neptune {
+  width: 66px;
+  height: 66px;
+  background: #7a91a7;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+.solar-system .neptune h2 {
+  margin-left: -12px;
+  margin-top: -40px;
+}
+.solar-system .neptune:hover {
+  cursor: pointer;
+}
+.solar-system .neptune:hover h2 {
+  color: #190b22;
+  text-shadow: 0 0 5px #d8deed;
+}/*# sourceMappingURL=style.css.map */

@@ -37,6 +37,9 @@
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
+.photo-simulator .controls span {
+  margin-bottom: 2rem;
+}
 .photo-simulator .controls input[type=range] {
   width: 300px;
 }/*# sourceMappingURL=style.css.map */
