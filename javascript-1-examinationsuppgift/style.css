@@ -22,6 +22,25 @@ header p {
   letter-spacing: 0.6em;
 }
 
+#search-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  left: 35%;
+  top: -50px;
+  max-width: 40rem;
+}
+#search-container h2 {
+  text-align: center;
+}
+#search-container #search-input {
+  height: 3rem;
+  width: 20rem;
+  align-self: center;
+  justify-self: center;
+  z-index: 1;
+}
+
 .solar-system {
   position: relative;
   display: flex;
@@ -40,6 +59,17 @@ header p {
   background: #ffd029;
   box-shadow: 0 0 250px rgba(255, 208, 41, 0.5);
   left: -700px;
+}
+.solar-system .sun h2 {
+  margin-left: 950px;
+  margin-top: 200px;
+}
+.solar-system .sun:hover {
+  cursor: pointer;
+}
+.solar-system .sun:hover h2 {
+  color: #190b22;
+  text-shadow: 0 0 5px #d8deed;
 }
 .solar-system .mercury {
   width: 14px;
@@ -200,4 +230,14 @@ header p {
 .solar-system .neptune:hover h2 {
   color: #190b22;
   text-shadow: 0 0 5px #d8deed;
+}
+
+@media screen and (max-width: 600px) {
+  .solar-system {
+    display: flex;
+    flex-direction: column;
+  }
+  .planet {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */
