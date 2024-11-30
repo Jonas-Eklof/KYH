@@ -1,4 +1,9 @@
-let planetId = document.querySelector(".planet-id");
+let planetId = document.querySelector(".planet-heading");
+let description = document.querySelector(".description");
+let circumference = document.querySelector(".circumference");
+let distance = document.querySelector(".distance");
+
+// API-inställningar -------------------------------------
 
 async function getApiKey() {
   try {
@@ -32,12 +37,15 @@ async function fetchPlanets(apiKey) {
       throw new Error(`Error: ${response.status}`);
     }
     let data = await response.json();
-    // console.log(data);
     return data;
   } catch (error) {
     console.error("Error fetching planets:", error);
+    document.querySelector(".planet-id").innerText =
+      "Unable to load planet data.";
   }
 }
+
+// Data för solsystemet
 
 async function loadSolarSystemData() {
   const apiKey = await getApiKey();
@@ -67,7 +75,12 @@ async function loadSolarSystemData() {
 
   //   planetId.innerText = earth.name;
 
-  console.log(sun.name);
+  console.log(earth.temp.night);
+
+  planetId.innerText = `${earth.name}`;
+  description.innerText = earth.desc;
+  circumference.innerText = `Jordens omkretsen är: ${earth.circumference}km`;
+  distance.innerText = `Jordens distans från solen är: ${earth.distance}km`;
 }
 
 loadSolarSystemData();
@@ -80,10 +93,19 @@ document.querySelector("#search-input").addEventListener("keyup", (event) => {
 
   planets.forEach((planet) => {
     const planetName = planet.querySelector("h2").innerText.toLowerCase();
-    if (planetName.startsWith(searchTerm)) {
+    if (planetName.includes(searchTerm)) {
       planet.style.display = "block";
     } else {
       planet.style.display = "none";
     }
+  });
+});
+
+// Länkning till sidor ------------------------
+
+document.querySelectorAll(".planet").forEach((planet) => {
+  planet.addEventListener("click", () => {
+    const planetName = planet.querySelector("h2").innerText.toLowerCase();
+    window.location.href = `${planetName}.html`;
   });
 });
