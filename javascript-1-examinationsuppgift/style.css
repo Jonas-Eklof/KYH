@@ -82,7 +82,7 @@ header p {
   transform: translate(-50%, -50%);
 }
 .solar-system .mercury h2 {
-  margin-left: -2.5rem;
+  margin-left: -3.2rem;
 }
 .solar-system .mercury:hover {
   cursor: pointer;
@@ -119,7 +119,7 @@ header p {
   transform: translate(-50%, -50%);
 }
 .solar-system .earth h2 {
-  margin-left: -0.9375rem;
+  margin-left: -1.6rem;
   margin-top: 1.875rem;
 }
 .solar-system .earth:hover {
@@ -175,7 +175,7 @@ header p {
   transform: translate(-50%, -50%);
 }
 .solar-system .saturn h2 {
-  margin-left: 2.1875rem;
+  margin-left: 1.4rem;
   margin-top: -2.5rem;
 }
 .solar-system .saturn:hover {
@@ -223,7 +223,7 @@ header p {
   transform: translate(-50%, -50%);
 }
 .solar-system .neptune h2 {
-  margin-left: -0.75rem;
+  margin-left: -1.5rem;
   margin-top: -2.5rem;
 }
 .solar-system .neptune:hover {
@@ -248,7 +248,7 @@ header p {
   margin-inline: auto;
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+  margin-top: 5rem;
   margin-bottom: 2rem;
   padding: 3rem;
   min-height: 70vh;
