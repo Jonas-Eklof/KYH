@@ -8,16 +8,16 @@ body {
 
 header {
   text-align: right;
-  padding: 20px;
+  padding: 1.3rem;
 
   h1 {
-    font-size: 60px;
+    font-size: 3.7rem;
     margin: 0;
     letter-spacing: 0.09em;
   }
 
   p {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin: 0;
     color: #ffd029;
     letter-spacing: 0.6em;
@@ -29,7 +29,7 @@ header {
   display: flex;
   flex-direction: column;
   left: 35%;
-  top: -50px;
+  top: -4.3rem;
   max-width: 40rem;
 
   h2 {
@@ -52,8 +52,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin-top: -150px;
+  height: 85vh;
+  margin-top: -12.5rem;
 
   .planet {
     position: absolute;
@@ -61,15 +61,15 @@ header {
   }
 
   .sun {
-    width: 900px;
+    width: 56.25rem;
     aspect-ratio: 1;
     background: #ffd029;
     box-shadow: 0 0 250px rgba(255, 208, 41, 0.5);
-    left: -700px;
+    left: -43.75rem;
 
     h2 {
-      margin-left: 950px;
-      margin-top: 200px;
+      margin-left: 59.375rem;
+      margin-top: 12.5rem;
     }
 
     &:hover {
@@ -83,15 +83,15 @@ header {
   }
 
   .mercury {
-    width: 14px;
-    height: 14px;
+    width: 0.875rem;
+    height: 0.875rem;
     background: #888888;
     top: 50%;
     left: 25%;
     transform: translate(-50%, -50%);
 
     h2 {
-      margin-left: -40px;
+      margin-left: -2.5rem;
     }
 
     &:hover {
@@ -105,16 +105,16 @@ header {
   }
 
   .venus {
-    width: 26px;
-    height: 26px;
+    width: 1.625rem;
+    height: 1.625rem;
     background: #e7cdcd;
     top: 50%;
     left: 32%;
     transform: translate(-50%, -50%);
 
     h2 {
-      margin-left: -20px;
-      margin-top: -40px;
+      margin-left: -1.25rem;
+      margin-top: -2.5rem;
     }
 
     &:hover {
@@ -128,16 +128,16 @@ header {
   }
 
   .earth {
-    width: 28px;
-    height: 28px;
+    width: 1.75rem;
+    height: 1.75rem;
     background: #428ed5;
     top: 50%;
     left: 38%;
     transform: translate(-50%, -50%);
 
     h2 {
-      margin-left: -15px;
-      margin-top: 30px;
+      margin-left: -0.9375rem;
+      margin-top: 1.875rem;
     }
 
     &:hover {
@@ -151,15 +151,15 @@ header {
   }
 
   .mars {
-    width: 14px;
-    height: 14px;
+    width: 0.875rem;
+    height: 0.875rem;
     background: #ef5f5f;
     top: 50%;
     left: 45%;
     transform: translate(-50%, -50%);
 
     h2 {
-      margin-left: -18px;
+      margin-left: -1.125rem;
     }
 
     &:hover {
@@ -173,16 +173,16 @@ header {
   }
 
   .jupiter {
-    width: 188px;
-    height: 188px;
+    width: 11.75rem;
+    height: 11.75rem;
     background: #e29468;
     top: 50%;
     left: 55%;
     transform: translate(-50%, -50%);
 
     h2 {
-      margin-left: 55px;
-      margin-top: -45px;
+      margin-left: 3.4375rem;
+      margin-top: -2.8125rem;
     }
 
     &:hover {
@@ -196,16 +196,16 @@ header {
   }
 
   .saturn {
-    width: 144px;
-    height: 144px;
+    width: 9rem;
+    height: 9rem;
     background: #c7aa72;
     top: 50%;
     left: 70%;
     transform: translate(-50%, -50%);
 
     h2 {
-      margin-left: 35px;
-      margin-top: -40px;
+      margin-left: 2.1875rem;
+      margin-top: -2.5rem;
     }
 
     &:hover {
@@ -220,8 +220,8 @@ header {
 
   .saturn-ring {
     position: absolute;
-    width: 218px;
-    height: 10px;
+    width: 16.125rem;
+    height: 0.625rem;
     background: rgba(255, 255, 255, 0.4);
     top: 50%;
     left: 70%;
@@ -230,16 +230,16 @@ header {
   }
 
   .uranus {
-    width: 66px;
-    height: 66px;
+    width: 4.125rem;
+    height: 4.125rem;
     background: #c9d4f1;
     top: 50%;
     left: 82%;
     transform: translate(-50%, -50%);
 
     h2 {
-      margin-left: -10px;
-      margin-top: 70px;
+      margin-left: -0.625rem;
+      margin-top: 4.375rem;
     }
 
     &:hover {
@@ -253,16 +253,16 @@ header {
   }
 
   .neptune {
-    width: 66px;
-    height: 66px;
+    width: 4.125rem;
+    height: 4.125rem;
     background: #7a91a7;
     top: 50%;
     left: 90%;
     transform: translate(-50%, -50%);
 
     h2 {
-      margin-left: -12px;
-      margin-top: -40px;
+      margin-left: -0.75rem;
+      margin-top: -2.5rem;
     }
 
     &:hover {
@@ -285,4 +285,17 @@ header {
   .planet {
     flex-direction: column;
   }
+}
+
+.planet-info-container {
+  max-width: 62.5rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 3rem;
+  min-height: 70vh;
+  border-radius: 1rem;
+  box-shadow: 0 0 2.8125rem #d8deed;
 }
