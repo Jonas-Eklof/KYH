@@ -40,12 +40,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updatePlanetInfo(planet) {
-    if (!planetId || !description || !circumference || !distance) {
-      // Om någon av kategorierna saknas loggas en error om det till console.
-      console.error("One or more UI elements are missing.");
-      return; // Om kriterierna för detta if-statement fylls så avslutas funktionen efter den har loggat ett error till console.
+    // if (!planetId || !description || !circumference || !distance) {
+    //   // Om någon av kategorierna saknas loggas en error om det till console.
+    //   console.error("One or more UI elements are missing.");
+    //   return; // Om kriterierna för detta if-statement fylls så avslutas funktionen efter den har loggat ett error till console.
+    // }
+    if (
+      !planetId ||
+      !description ||
+      !circumference ||
+      !distance ||
+      !latinName
+    ) {
+      // Logga ett meddelande som visar att vi är på en sida utan dessa element
+      console.warn(
+        "Skipping updatePlanetInfo: Not all elements are present on this page."
+      );
+      return; // Avsluta funktionen om elementen saknas // Detta gäller enbart på index.html så resterande kod i funktionen körs inte i onödan.
     }
-
     if (!planet) {
       planetId.innerText = "Planet not found."; // Meddelar användaren på sidan om planeten/informationen inte kunde hittas.
       description.innerText = "We could not find information for this planet.";
@@ -100,19 +112,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Sökfunktion ----------------------------------
 
-document.querySelector("#search-input").addEventListener("keyup", (event) => {
-  // Hämtar ut ett HTML-element med ID search-input och lyssnar efter eventet "keyup"
-  const searchTerm = event.target.value.toLowerCase(); // Tar värdet från input-fältet som användaren skriver i, konverterar texten till små bokstäver för att göra sökningen case-insensitive
-  const planets = document.querySelectorAll(".planet"); // Hämtar alla element med .planet-class, querySelectorAll gör det till en NodeList som kan loopas igenom
+// document.querySelector("#search-input").addEventListener("keyup", (event) => {
+//   // Hämtar ut ett HTML-element med ID search-input och lyssnar efter eventet "keyup"
+//   const searchTerm = event.target.value.toLowerCase(); // Tar värdet från input-fältet som användaren skriver i, konverterar texten till små bokstäver för att göra sökningen case-insensitive
+//   const planets = document.querySelectorAll(".planet"); // Hämtar alla element med .planet-class, querySelectorAll gör det till en NodeList som kan loopas igenom
 
-  planets.forEach((planet) => {
-    // Itererar genom alla element i NodeList som skapades innan
-    const planetName = planet.querySelector("h2").innerText.toLowerCase(); // Hämtar varje planets h2-text, vilket är deras namn och gör texten till lowercase
-    if (planetName.includes(searchTerm)) {
-      // Kollar om någon planets namn innehåller texten från sökfältet
-      planet.style.display = "block"; // Planeten visas om texten i sökfältet matchar planetens namn
-    } else {
-      planet.style.display = "none"; // Om namnet inte matchar något av texten i sökfältet så döljs planeten
-    }
-  });
+//   planets.forEach((planet) => {
+//     // Itererar genom alla element i NodeList som skapades innan
+//     const planetName = planet.querySelector("h2").innerText.toLowerCase(); // Hämtar varje planets h2-text, vilket är deras namn och gör texten till lowercase
+//     if (planetName.includes(searchTerm)) {
+//       // Kollar om någon planets namn innehåller texten från sökfältet
+//       planet.style.display = "block"; // Planeten visas om texten i sökfältet matchar planetens namn
+//     } else {
+//       planet.style.display = "none"; // Om namnet inte matchar något av texten i sökfältet så döljs planeten
+//     }
+//   });
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.querySelector("#search-input");
+  if (searchInput) {
+    searchInput.addEventListener("keyup", (event) => {
+      const searchTerm = event.target.value.toLowerCase();
+      const planets = document.querySelectorAll(".planet");
+
+      planets.forEach((planet) => {
+        const planetName = planet.querySelector("h2").innerText.toLowerCase();
+        if (planetName.includes(searchTerm)) {
+          planet.style.display = "block";
+        } else {
+          planet.style.display = "none";
+        }
+      });
+    });
+  } else {
+    return;
+  }
 });
