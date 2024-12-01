@@ -298,4 +298,23 @@ header {
   min-height: 70vh;
   border-radius: 1rem;
   box-shadow: 0 0 2.8125rem #d8deed;
+
+  h1.planet-heading {
+    font-size: 2.5rem;
+  }
+
+  h2.latin-name {
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: -0.5rem;
+  }
+
+  p.description {
+    font-size: 1.1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid #ebebeb6b;
+    border-bottom: 1px solid #ebebeb6b;
+  }
 }

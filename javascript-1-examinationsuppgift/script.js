@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const description = document.querySelector(".description");
   const circumference = document.querySelector(".circumference");
   const distance = document.querySelector(".distance");
+  const latinName = document.querySelector(".latin-name");
 
   async function getApiKey() {
     try {
@@ -56,11 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
     description.innerText = planet.desc || "Ingen beskrivning tillgänglig.";
     circumference.innerText = `Omkrets: ${planet.circumference || "okänd"} km`;
     distance.innerText = `Avstånd från solen: ${planet.distance || "okänd"} km`;
+    latinName.innerText = `${planet.latinName}`;
   }
 
   async function loadSolarSystemData() {
     // Denna funktion hämtar data om solsystemets planeter
-    const apiKey = await getApiKey();
+    const apiKey = await getApiKey(); // Hämtar API-nyckeln och sparar den till en variabel
     if (!apiKey) return; // Avslutar funktionen om API-nyckeln inte hämtas korrekt.
 
     const planets = await fetchPlanets(apiKey); // Använder API-nyckeln för att hämta info om solsystemets planeter
