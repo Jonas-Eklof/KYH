@@ -40,11 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updatePlanetInfo(planet) {
-    // if (!planetId || !description || !circumference || !distance) {
-    //   // Om någon av kategorierna saknas loggas en error om det till console.
-    //   console.error("One or more UI elements are missing.");
-    //   return; // Om kriterierna för detta if-statement fylls så avslutas funktionen efter den har loggat ett error till console.
-    // }
     if (
       !planetId ||
       !description ||
