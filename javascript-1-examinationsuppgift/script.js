@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Gör att javascript-koden laddas efter att html-dokumentet har laddats och parsats helt
   const planetId = document.querySelector(".planet-heading");
+  const latinName = document.querySelector(".latin-name");
   const description = document.querySelector(".description");
   const circumference = document.querySelector(".circumference");
   const distance = document.querySelector(".distance");
-  const latinName = document.querySelector(".latin-name");
 
   async function getApiKey() {
     try {
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       if (!response.ok) throw new Error(`Error: ${response.status}`);
       const data = await response.json(); // Konverterar den mottagna datan till json-format
-      // console.log(data);
+      //   console.log(data);
       return data; // Returnerar datan när funktionen kallas
     } catch (error) {
       console.error("Error fetching planets:", error);
@@ -112,36 +112,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Sökfunktion ----------------------------------
 
-// document.querySelector("#search-input").addEventListener("keyup", (event) => {
-//   // Hämtar ut ett HTML-element med ID search-input och lyssnar efter eventet "keyup"
-//   const searchTerm = event.target.value.toLowerCase(); // Tar värdet från input-fältet som användaren skriver i, konverterar texten till små bokstäver för att göra sökningen case-insensitive
-//   const planets = document.querySelectorAll(".planet"); // Hämtar alla element med .planet-class, querySelectorAll gör det till en NodeList som kan loopas igenom
-
-//   planets.forEach((planet) => {
-//     // Itererar genom alla element i NodeList som skapades innan
-//     const planetName = planet.querySelector("h2").innerText.toLowerCase(); // Hämtar varje planets h2-text, vilket är deras namn och gör texten till lowercase
-//     if (planetName.includes(searchTerm)) {
-//       // Kollar om någon planets namn innehåller texten från sökfältet
-//       planet.style.display = "block"; // Planeten visas om texten i sökfältet matchar planetens namn
-//     } else {
-//       planet.style.display = "none"; // Om namnet inte matchar något av texten i sökfältet så döljs planeten
-//     }
-//   });
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
+  // Laddar denna funktion om all DOM-content är laddad
   const searchInput = document.querySelector("#search-input");
   if (searchInput) {
+    // Om sökfäljtet finns tillgänglig på sidan, utför följande kod - annars avslutas funktionen med "return;"
     searchInput.addEventListener("keyup", (event) => {
-      const searchTerm = event.target.value.toLowerCase();
-      const planets = document.querySelectorAll(".planet");
+      // Hämtar ut ett HTML-element med ID search-input och lyssnar efter eventet "keyup"
+      const searchTerm = event.target.value.toLowerCase(); // Tar värdet från input-fältet som användaren skriver i, konverterar texten till små bokstäver för att göra sökningen case-insensitive
+      const planets = document.querySelectorAll(".planet"); // Hämtar alla element med .planet-class, querySelectorAll gör det till en NodeList som kan loopas igenom
 
       planets.forEach((planet) => {
-        const planetName = planet.querySelector("h2").innerText.toLowerCase();
+        // Itererar genom alla element i NodeList som skapades innan
+        const planetName = planet.querySelector("h2").innerText.toLowerCase(); // Hämtar varje planets h2-text, vilket är deras namn och gör texten till lowercase
         if (planetName.includes(searchTerm)) {
-          planet.style.display = "block";
+          // Kollar om någon planets namn innehåller texten från sökfältet
+          planet.style.display = "block"; // Planeten visas om texten i sökfältet matchar planetens namn
         } else {
-          planet.style.display = "none";
+          planet.style.display = "none"; // Om namnet inte matchar något av texten i sökfältet så döljs planeten
         }
       });
     });

@@ -246,12 +246,13 @@ header p {
 }
 .planet-info-container {
   max-width: 62.5rem;
-  margin-inline: auto;
   display: flex;
   flex-direction: column;
+  justify-self: center;
   margin-top: 5rem;
   margin-bottom: 2rem;
-  padding: 3rem;
+  margin-inline: 2rem;
+  padding: 1.5rem;
   min-height: 70vh;
   border-radius: 1rem;
   box-shadow: 0 0 2.8125rem #d8deed;
