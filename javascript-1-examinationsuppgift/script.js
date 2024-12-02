@@ -1,12 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Gör att javascript-koden laddas efter att html-dokumentet har laddats och parsats helt
+
+  // Variabler ---------------------------------------------
+
   const planetId = document.querySelector(".planet-heading");
   const latinName = document.querySelector(".latin-name");
   const description = document.querySelector(".description");
   const circumference = document.querySelector(".circumference");
   const distance = document.querySelector(".distance");
+  const nightTemp = document.querySelector(".night-temp");
+  const dayTemp = document.querySelector(".day-temp");
 
   async function getApiKey() {
+    // Funktion för att hämta API-nyckel
     try {
       let response = await fetch(
         "https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/keys", // Hämtar api-nyckel via POST-metoden
@@ -14,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       if (!response.ok) throw new Error("Failed to fetch API key"); // Om responsen inte är .ok så slängs ett error
       let data = await response.json(); // Konverterar den mottagna datan till json-format
+
       return data.key; // API nyckel
     } catch (error) {
       console.error("Error fetching API key:", error);
@@ -47,11 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       !distance ||
       !latinName
     ) {
-      // Logga ett meddelande som visar att vi är på en sida utan dessa element
-      console.warn(
-        "Skipping updatePlanetInfo: Not all elements are present on this page."
-      );
-      return; // Avsluta funktionen om elementen saknas // Detta gäller enbart på index.html så resterande kod i funktionen körs inte i onödan.
+      return; // Avsluta funktionen om elementen saknas // Detta gäller enbart på index.html så resterande kod i funktionen inte körs i onödan.
     }
     if (!planet) {
       planetId.innerText = "Planet not found."; // Meddelar användaren på sidan om planeten/informationen inte kunde hittas.
@@ -65,6 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
     circumference.innerText = `Omkrets: ${planet.circumference || "okänd"} km`;
     distance.innerText = `Avstånd från solen: ${planet.distance || "okänd"} km`;
     latinName.innerText = `${planet.latinName}`;
+    nightTemp.innerText = `Temperaturen under natten är: ${planet.temp.night}`;
+    dayTemp.innerText = `Temperaturen under dagen är: ${planet.temp.day}`;
   }
 
   async function loadSolarSystemData() {
@@ -108,8 +113,19 @@ document.addEventListener("DOMContentLoaded", () => {
 // Sökfunktion ----------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Laddar denna funktion om all DOM-content är laddad
   const searchInput = document.querySelector("#search-input");
+  const noResultsMessage = document.createElement("h2"); // Skapar ett nytt h2-element
+  noResultsMessage.innerText =
+    "Det finns ingen planet som matchar din sökning."; // Meddelandetext
+  noResultsMessage.style.display = "none"; // Dölj meddelandet som standard
+  noResultsMessage.style.textAlign = "center"; // Förbättrar visningen
+  noResultsMessage.style.color = "red"; // Gör texten mer framträdande
+
+  const container = document.querySelector(".solar-system");
+  if (container) {
+    container.appendChild(noResultsMessage); // Lägg till meddelandet i container-elementet för planeterna
+  }
+
   if (searchInput) {
     // Om sökfäljtet finns tillgänglig på sidan, utför följande kod - annars avslutas funktionen med "return;"
     searchInput.addEventListener("keyup", (event) => {
@@ -117,18 +133,25 @@ document.addEventListener("DOMContentLoaded", () => {
       const searchTerm = event.target.value.toLowerCase(); // Tar värdet från input-fältet som användaren skriver i, konverterar texten till små bokstäver för att göra sökningen case-insensitive
       const planets = document.querySelectorAll(".planet"); // Hämtar alla element med .planet-class, querySelectorAll gör det till en NodeList som kan loopas igenom
 
+      let hasVisiblePlanets = false; // Håll koll på om någon planet visas
+
       planets.forEach((planet) => {
         // Itererar genom alla element i NodeList som skapades innan
         const planetName = planet.querySelector("h2").innerText.toLowerCase(); // Hämtar varje planets h2-text, vilket är deras namn och gör texten till lowercase
         if (planetName.includes(searchTerm)) {
           // Kollar om någon planets namn innehåller texten från sökfältet
           planet.style.display = "block"; // Planeten visas om texten i sökfältet matchar planetens namn
+          hasVisiblePlanets = true; // Minst en planet visas
         } else {
           planet.style.display = "none"; // Om namnet inte matchar något av texten i sökfältet så döljs planeten
         }
       });
+
+      if (hasVisiblePlanets) {
+        noResultsMessage.style.display = "none"; // Dölj meddelandet om det finns synliga planeter
+      } else {
+        noResultsMessage.style.display = "block"; // Visa meddelandet om inga planeter matchar
+      }
     });
-  } else {
-    return;
   }
 });

@@ -21,6 +21,10 @@ header p {
   color: #ffd029;
   letter-spacing: 0.6em;
 }
+header a {
+  text-decoration: none;
+  color: #fff;
+}
 
 #search-container {
   position: relative;
@@ -249,7 +253,7 @@ header p {
   display: flex;
   flex-direction: column;
   justify-self: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   margin-inline: 2rem;
   padding: 1.5rem;
@@ -272,6 +276,10 @@ header p {
   padding-bottom: 2rem;
   border-top: 1px solid rgba(235, 235, 235, 0.4196078431);
   border-bottom: 1px solid rgba(235, 235, 235, 0.4196078431);
+}
+.planet-info-container .temp-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .sun::after {
