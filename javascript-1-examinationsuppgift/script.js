@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const nightTemp = document.querySelector(".night-temp");
   const dayTemp = document.querySelector(".day-temp");
 
+  // Funktion för att hämta API-nyckel ----------------------
   async function getApiKey() {
-    // Funktion för att hämta API-nyckel
     try {
       let response = await fetch(
         "https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/keys", // Hämtar api-nyckel via POST-metoden
@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error fetching API key:", error);
     }
   }
+
   async function fetchPlanets(apiKey) {
     // API-nyckeln ges som parameter i denna funktion för att kunna användas som variabel för API-nyckeln i funktionen
     try {
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Funktion för att fylla html-sidorna för planeterna med info från APIn.
   function updatePlanetInfo(planet) {
     if (
       !planetId ||
@@ -68,8 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
     circumference.innerText = `Omkrets: ${planet.circumference || "okänd"} km`;
     distance.innerText = `Avstånd från solen: ${planet.distance || "okänd"} km`;
     latinName.innerText = `${planet.latinName}`;
-    nightTemp.innerText = `Temperaturen under natten är: ${planet.temp.night}`;
-    dayTemp.innerText = `Temperaturen under dagen är: ${planet.temp.day}`;
+    nightTemp.innerText = `Temperaturen under natten är: ${planet.temp.night}°C`;
+    dayTemp.innerText = `Temperaturen under dagen är: ${planet.temp.day}°C`;
   }
 
   async function loadSolarSystemData() {
@@ -77,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const apiKey = await getApiKey(); // Hämtar API-nyckeln och sparar den till en variabel
     if (!apiKey) return; // Avslutar funktionen om API-nyckeln inte hämtas korrekt.
 
-    const planets = await fetchPlanets(apiKey); // Använder API-nyckeln för att hämta info om solsystemets planeter
+    const planets = await fetchPlanets(apiKey); // Använder API-nyckeln som argument när funktionen "fetchPlanets" kallas för att hämta info om solsystemets planeter
     // console.log(planets.bodies[0].name);  // En console.log() som användes för debugging av koden
     if (!planets || !planets.bodies) return;
 
@@ -108,11 +110,9 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = `${planetName.toLowerCase()}.html`; // Navigerar till planetens sida. om till exempel planetName-värder är venus så blir användaren skickad till venus.html
     });
   });
-});
 
-// Sökfunktion ----------------------------------
+  // Sökfunktion ----------------------------------
 
-document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.querySelector("#search-input");
   const noResultsMessage = document.createElement("h2"); // Skapar ett nytt h2-element
   noResultsMessage.innerText =
