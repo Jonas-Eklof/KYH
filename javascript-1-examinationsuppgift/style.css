@@ -9,6 +9,8 @@ body {
 header {
   text-align: right;
   padding: 1.3rem;
+  position: relative;
+  z-index: 5;
 }
 header h1 {
   font-size: 3.7rem;
@@ -60,6 +62,9 @@ header a {
   position: absolute;
   border-radius: 50%;
 }
+.solar-system .planet:hover {
+  box-shadow: 0 0 55px 15px #abb9db;
+}
 .solar-system .sun {
   width: 56.25rem;
   aspect-ratio: 1;
@@ -74,10 +79,6 @@ header a {
 .solar-system .sun:hover {
   cursor: pointer;
 }
-.solar-system .sun:hover h2 {
-  color: #190b22;
-  text-shadow: 0 0 5px #d8deed;
-}
 .solar-system .mercury {
   width: 0.875rem;
   height: 0.875rem;
@@ -91,10 +92,6 @@ header a {
 }
 .solar-system .mercury:hover {
   cursor: pointer;
-}
-.solar-system .mercury:hover h2 {
-  color: #190b22;
-  text-shadow: 0 0 5px #d8deed;
 }
 .solar-system .venus {
   width: 1.625rem;
@@ -111,10 +108,6 @@ header a {
 .solar-system .venus:hover {
   cursor: pointer;
 }
-.solar-system .venus:hover h2 {
-  color: #190b22;
-  text-shadow: 0 0 5px #d8deed;
-}
 .solar-system .earth {
   width: 1.75rem;
   height: 1.75rem;
@@ -130,10 +123,6 @@ header a {
 .solar-system .earth:hover {
   cursor: pointer;
 }
-.solar-system .earth:hover h2 {
-  color: #190b22;
-  text-shadow: 0 0 5px #d8deed;
-}
 .solar-system .mars {
   width: 0.875rem;
   height: 0.875rem;
@@ -147,10 +136,6 @@ header a {
 }
 .solar-system .mars:hover {
   cursor: pointer;
-}
-.solar-system .mars:hover h2 {
-  color: #190b22;
-  text-shadow: 0 0 5px #d8deed;
 }
 .solar-system .jupiter {
   width: 11.75rem;
@@ -167,10 +152,6 @@ header a {
 .solar-system .jupiter:hover {
   cursor: pointer;
 }
-.solar-system .jupiter:hover h2 {
-  color: #190b22;
-  text-shadow: 0 0 5px #d8deed;
-}
 .solar-system .saturn {
   width: 9rem;
   height: 9rem;
@@ -185,10 +166,6 @@ header a {
 }
 .solar-system .saturn:hover {
   cursor: pointer;
-}
-.solar-system .saturn:hover h2 {
-  color: #190b22;
-  text-shadow: 0 0 5px #d8deed;
 }
 .solar-system .saturn-ring {
   position: absolute;
@@ -215,10 +192,6 @@ header a {
 .solar-system .uranus:hover {
   cursor: pointer;
 }
-.solar-system .uranus:hover h2 {
-  color: #190b22;
-  text-shadow: 0 0 5px #d8deed;
-}
 .solar-system .neptune {
   width: 4.125rem;
   height: 4.125rem;
@@ -233,10 +206,6 @@ header a {
 }
 .solar-system .neptune:hover {
   cursor: pointer;
-}
-.solar-system .neptune:hover h2 {
-  color: #190b22;
-  text-shadow: 0 0 5px #d8deed;
 }
 
 @media screen and (max-width: 600px) {

@@ -9,6 +9,8 @@ body {
 header {
   text-align: right;
   padding: 1.3rem;
+  position: relative;
+  z-index: 5;
 
   h1 {
     font-size: 3.7rem;
@@ -66,6 +68,10 @@ header {
     border-radius: 50%;
   }
 
+  .planet:hover {
+    box-shadow: 0 0 55px 15px #abb9db;
+  }
+
   .sun {
     width: 56.25rem;
     aspect-ratio: 1;
@@ -80,11 +86,6 @@ header {
 
     &:hover {
       cursor: pointer;
-    }
-
-    &:hover h2 {
-      color: #190b22;
-      text-shadow: 0 0 5px #d8deed;
     }
   }
 
@@ -102,11 +103,6 @@ header {
 
     &:hover {
       cursor: pointer;
-    }
-
-    &:hover h2 {
-      color: #190b22;
-      text-shadow: 0 0 5px #d8deed;
     }
   }
 
@@ -126,11 +122,6 @@ header {
     &:hover {
       cursor: pointer;
     }
-
-    &:hover h2 {
-      color: #190b22;
-      text-shadow: 0 0 5px #d8deed;
-    }
   }
 
   .earth {
@@ -149,11 +140,6 @@ header {
     &:hover {
       cursor: pointer;
     }
-
-    &:hover h2 {
-      color: #190b22;
-      text-shadow: 0 0 5px #d8deed;
-    }
   }
 
   .mars {
@@ -170,11 +156,6 @@ header {
 
     &:hover {
       cursor: pointer;
-    }
-
-    &:hover h2 {
-      color: #190b22;
-      text-shadow: 0 0 5px #d8deed;
     }
   }
 
@@ -194,11 +175,6 @@ header {
     &:hover {
       cursor: pointer;
     }
-
-    &:hover h2 {
-      color: #190b22;
-      text-shadow: 0 0 5px #d8deed;
-    }
   }
 
   .saturn {
@@ -216,11 +192,6 @@ header {
 
     &:hover {
       cursor: pointer;
-    }
-
-    &:hover h2 {
-      color: #190b22;
-      text-shadow: 0 0 5px #d8deed;
     }
   }
 
@@ -251,11 +222,6 @@ header {
     &:hover {
       cursor: pointer;
     }
-
-    &:hover h2 {
-      color: #190b22;
-      text-shadow: 0 0 5px #d8deed;
-    }
   }
 
   .neptune {
@@ -273,11 +239,6 @@ header {
 
     &:hover {
       cursor: pointer;
-    }
-
-    &:hover h2 {
-      color: #190b22;
-      text-shadow: 0 0 5px #d8deed;
     }
   }
 }
