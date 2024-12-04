@@ -241,6 +241,7 @@ header a {
 }
 .planet-info-container p {
   font-family: Arial, Helvetica, sans-serif;
+  opacity: 80%;
 }
 .planet-info-container h1.planet-heading {
   font-size: 3.75rem;
@@ -270,6 +271,9 @@ header a {
   display: flex;
   justify-content: space-between;
 }
+.planet-info-container .temp-container p {
+  margin-top: -1rem;
+}
 .planet-info-container .info {
   display: flex;
   justify-content: space-between;
@@ -277,8 +281,8 @@ header a {
 .planet-info-container .stat {
   margin-block: 1rem;
 }
-.planet-info-container .min p {
-  margin-top: 0;
+.planet-info-container .stat p {
+  margin-top: -1rem;
 }
 
 .sun::after {

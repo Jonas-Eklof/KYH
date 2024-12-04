@@ -282,6 +282,7 @@ header {
 
   p {
     font-family: Arial, Helvetica, sans-serif;
+    opacity: 80%;
   }
 
   h1.planet-heading {
@@ -315,6 +316,10 @@ header {
   .temp-container {
     display: flex;
     justify-content: space-between;
+
+    p {
+      margin-top: -1rem;
+    }
   }
 
   .info {
@@ -324,10 +329,10 @@ header {
 
   .stat {
     margin-block: 1rem;
-  }
 
-  .min p {
-    margin-top: 0;
+    p {
+      margin-top: -1rem;
+    }
   }
 }
 
