@@ -249,22 +249,26 @@ header a {
   }
 }
 .planet-info-container {
-  max-width: 62.5rem;
+  max-width: 50rem;
   display: flex;
   flex-direction: column;
   justify-self: center;
-  margin-top: 2rem;
   margin-bottom: 2rem;
   margin-inline: 2rem;
   padding: 1.5rem;
   min-height: 70vh;
   border-radius: 1rem;
-  box-shadow: 0 0 2.8125rem #d8deed;
 }
 .planet-info-container a.back-to-index {
   color: #ffd029;
   align-self: flex-end;
   font-size: 1rem;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.1em;
+}
+.planet-info-container a.back-to-index:hover {
+  text-decoration: underline;
 }
 .planet-info-container p {
   font-family: Arial, Helvetica, sans-serif;
@@ -274,6 +278,7 @@ header a {
   font-family: "Secular One", sans-serif;
   letter-spacing: 0.09rem;
   font-size: bold;
+  margin-top: 0;
 }
 .planet-info-container h2.latin-name {
   text-transform: uppercase;
@@ -288,9 +293,23 @@ header a {
   border-top: 1px solid rgba(235, 235, 235, 0.4196078431);
   border-bottom: 1px solid rgba(235, 235, 235, 0.4196078431);
 }
+.planet-info-container .line {
+  width: 100%;
+  opacity: 50%;
+}
 .planet-info-container .temp-container {
   display: flex;
   justify-content: space-between;
+}
+.planet-info-container .info {
+  display: flex;
+  justify-content: space-between;
+}
+.planet-info-container .stat {
+  margin-block: 1rem;
+}
+.planet-info-container .min p {
+  margin-top: 0;
 }
 
 .sun::after {

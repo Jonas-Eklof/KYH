@@ -294,22 +294,29 @@ header {
 }
 
 .planet-info-container {
-  max-width: 62.5rem;
+  max-width: 50rem;
   display: flex;
   flex-direction: column;
   justify-self: center;
-  margin-top: 2rem;
+  // margin-top: 2rem;
   margin-bottom: 2rem;
   margin-inline: 2rem;
   padding: 1.5rem;
   min-height: 70vh;
   border-radius: 1rem;
-  box-shadow: 0 0 2.8125rem #d8deed;
+  // box-shadow: 0 0 2.8125rem #d8deed;
 
   a.back-to-index {
     color: #ffd029;
     align-self: flex-end;
     font-size: 1rem;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1em;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   p {
@@ -321,6 +328,7 @@ header {
     font-family: "Secular One", sans-serif;
     letter-spacing: 0.09rem;
     font-size: bold;
+    margin-top: 0;
   }
 
   h2.latin-name {
@@ -338,9 +346,27 @@ header {
     border-bottom: 1px solid #ebebeb6b;
   }
 
+  .line {
+    width: 100%;
+    opacity: 50%;
+  }
+
   .temp-container {
     display: flex;
     justify-content: space-between;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .stat {
+    margin-block: 1rem;
+  }
+
+  .min p {
+    margin-top: 0;
   }
 }
 
@@ -362,7 +388,7 @@ header {
 // Orbital effect --------------------------
 
 // .planet {
-//   animation: orbit 20s infinite linear;
+//   animation: orbit 10s infinite linear;
 // }
 
 // @keyframes orbit {
