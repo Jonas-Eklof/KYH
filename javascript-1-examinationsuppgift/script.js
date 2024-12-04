@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       if (!response.ok) throw new Error("Failed to fetch API key"); // Om responsen inte är .ok så slängs ett error
       let data = await response.json(); // Konverterar den mottagna datan till json-format
-
       return data.key; // API nyckel
     } catch (error) {
       console.error("Error fetching API key:", error);
@@ -39,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       if (!response.ok) throw new Error(`Error: ${response.status}`);
       const data = await response.json(); // Konverterar den mottagna datan till json-format
-      //   console.log(data);
+      // console.log(data);
       return data; // Returnerar datan när funktionen kallas
     } catch (error) {
       console.error("Error fetching planets:", error);
@@ -67,11 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Uppdaterar textinnehållet på html-sidorna.
     planetId.innerText = planet.name || "Okänd planet";
     description.innerText = planet.desc || "Ingen beskrivning tillgänglig.";
-    circumference.innerText = `Omkrets: ${planet.circumference || "okänd"} km`;
-    distance.innerText = `Avstånd från solen: ${planet.distance || "okänd"} km`;
+    circumference.innerText = `${planet.circumference || "okänd"} km`;
+    distance.innerText = `${planet.distance || "okänd"} km`;
     latinName.innerText = `${planet.latinName}`;
-    nightTemp.innerText = `Temperaturen under natten är: ${planet.temp.night}°C`;
-    dayTemp.innerText = `Temperaturen under dagen är: ${planet.temp.day}°C`;
+    nightTemp.innerText = `${planet.temp.night}°C`;
+    dayTemp.innerText = `${planet.temp.day}°C`;
   }
 
   async function loadSolarSystemData() {
@@ -83,8 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // console.log(planets.bodies[0].name);  // En console.log() som användes för debugging av koden
     if (!planets || !planets.bodies) return;
 
-    // Tar ut namnet från URL, utan '.html' för att veta vilken planets info som ska visas.
-    const pathname = window.location.pathname;
+    const pathname = window.location.pathname; // Tar ut namnet från URL, utan '.html' för att veta vilken planets info som ska visas.
     const planetName = pathname.split("/").pop().replace(".html", ""); // Delar upp URLen med .split() och hämtar det sista elementet med .pop(), tar bort filändelsen ".html" och byter ut det mot "" vilket är en tom sträng
 
     // Hittar planet baserat på namnet, om namnet matchar namnet i URLen så visas informationen om planeten
@@ -107,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(planet);
         return;
       }
-      window.location.href = `${planetName.toLowerCase()}.html`; // Navigerar till planetens sida. om till exempel planetName-värder är venus så blir användaren skickad till venus.html
+      window.location.href = `${planetName.toLowerCase()}.html`; // Navigerar till planetens sida. om till exempel planetName-värdet är venus så blir användaren skickad till venus.html
     });
   });
 
@@ -127,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (searchInput) {
-    // Om sökfäljtet finns tillgänglig på sidan, utför följande kod - annars avslutas funktionen med "return;"
+    // Om sökfältet finns tillgänglig på sidan, utför följande kod - annars avslutas funktionen med "return;"
     searchInput.addEventListener("keyup", (event) => {
       // Hämtar ut ett HTML-element med ID search-input och lyssnar efter eventet "keyup"
       const searchTerm = event.target.value.toLowerCase(); // Tar värdet från input-fältet som användaren skriver i, konverterar texten till små bokstäver för att göra sökningen case-insensitive

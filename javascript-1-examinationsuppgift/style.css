@@ -261,6 +261,11 @@ header a {
   border-radius: 1rem;
   box-shadow: 0 0 2.8125rem #d8deed;
 }
+.planet-info-container a.back-to-index {
+  color: #ffd029;
+  align-self: flex-end;
+  font-size: 1rem;
+}
 .planet-info-container p {
   font-family: Arial, Helvetica, sans-serif;
 }
