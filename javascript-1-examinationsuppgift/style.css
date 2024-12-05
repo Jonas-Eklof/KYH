@@ -257,6 +257,9 @@ header a {
   font-size: 1.7rem;
   margin-top: -0.5rem;
 }
+.planet-info-container h3 {
+  font-size: 1.6rem;
+}
 .planet-info-container p.description {
   padding-top: 2rem;
   padding-bottom: 2rem;

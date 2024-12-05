@@ -299,6 +299,10 @@ header {
     margin-top: -0.5rem;
   }
 
+  h3 {
+    font-size: 1.6rem;
+  }
+
   p.description {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -338,6 +342,7 @@ header {
 // Rotation effect -----------------------
 
 .planet:not(.sun):hover {
+  // Skapar en effekt där planeterna + tillhörande h2-taggar roterar när man hovrar över dem, men solen är exkluderad då den fick ett underligt beteende
   animation: rotate 10s infinite linear;
 }
 

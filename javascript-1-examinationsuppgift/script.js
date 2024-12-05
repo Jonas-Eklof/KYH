@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const description = document.querySelector(".description");
   const circumference = document.querySelector(".circumference");
   const distance = document.querySelector(".distance");
-  const nightTemp = document.querySelector(".night-temp");
-  const dayTemp = document.querySelector(".day-temp");
+  const minTemp = document.querySelector(".night-temp");
+  const maxTemp = document.querySelector(".day-temp");
 
   // Funktion för att hämta API-nyckel ----------------------
   async function getApiKey() {
@@ -69,8 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
     circumference.innerText = `${planet.circumference || "okänd"} km`;
     distance.innerText = `${planet.distance || "okänd"} km`;
     latinName.innerText = `${planet.latinName}`;
-    nightTemp.innerText = `${planet.temp.night}°C`;
-    dayTemp.innerText = `${planet.temp.day}°C`;
+    minTemp.innerText = `${planet.temp.night}°C`;
+    maxTemp.innerText = `${planet.temp.day}°C`;
   }
 
   async function loadSolarSystemData() {
