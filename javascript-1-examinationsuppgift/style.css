@@ -285,6 +285,18 @@ header a {
   margin-top: -1rem;
 }
 
+.planet:not(.sun):hover {
+  animation: rotate 10s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 .sun::after {
   content: "";
   position: absolute;

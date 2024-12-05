@@ -259,13 +259,11 @@ header {
   display: flex;
   flex-direction: column;
   justify-self: center;
-  // margin-top: 2rem;
   margin-bottom: 2rem;
   margin-inline: 2rem;
   padding: 1.5rem;
   min-height: 70vh;
   border-radius: 1rem;
-  // box-shadow: 0 0 2.8125rem #d8deed;
 
   a.back-to-index {
     color: #ffd029;
@@ -338,34 +336,20 @@ header {
 
 // Rotation effect -----------------------
 
-// .planet:not(.sun):hover {
-//   animation: rotate 5s infinite linear;
-// }
+.planet:not(.sun):hover {
+  animation: rotate 10s infinite linear;
+}
 
-// @keyframes rotate {
-//   from {
-//     transform: translate(-50%, -50%) rotate(0deg);
-//   }
-//   to {
-//     transform: translate(-50%, -50%) rotate(360deg);
-//   }
-// }
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 
-// Orbital effect --------------------------
-
-// .planet {
-//   animation: orbit 10s infinite linear;
-// }
-
-// @keyframes orbit {
-//   from {
-//     transform: rotate(0deg) translateX(3rem) rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(360deg) translateX(3rem) rotate(-360deg);
-//   }
-// }
-
+// Pulserande sol/"solstrålar"
 .sun::after {
   content: "";
   position: absolute;
