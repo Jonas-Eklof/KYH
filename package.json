@@ -1,5 +1,8 @@
 {
+  "workspaces": [
+    "KYH/*"
+  ],
   "dependencies": {
-    "jsdom": "^25.0.1"
+    "vite": "^6.0.5"
   }
 }
