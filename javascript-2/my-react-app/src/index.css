@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #f0f0f0;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,8 +24,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -64,5 +62,23 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+.profile-card {
+  background-color: #6786ee;
+  color: hsl(0, 0%, 24%);
+  max-width: 250px;
+  border: 1px solid hsl(0, 0%, 81%);
+  border-radius: 10px;
+  margin-left: 1rem;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.224);
+
+  img {
+    width: 60%;
+    height: auto;
+    border-radius: 50%;
   }
 }
