@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Header />
-      <ProfileCard />
+      <ProfileCard name="Jonas" title="Student" />
       <Footer />
     </>
   );
