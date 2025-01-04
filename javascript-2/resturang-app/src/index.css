@@ -63,11 +63,20 @@ body {
   .order-more {
     background-color: #353131;
     text-shadow: 1px 1px 0 #0000004d;
+
+    &:hover {
+      background-color: #242020;
+    }
   }
 
   .receipt {
     background-color: transparent;
     border: 2px solid #f4f3f1f0;
     text-shadow: 1px 1px 0 #0000004d;
+
+    &:hover {
+      background-color: #e1e1e1;
+      color: #353131;
+    }
   }
 }
