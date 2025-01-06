@@ -12,6 +12,11 @@ export default function InputDisplay() {
     setDisplayValue(inputValue);
   };
 
+  const clearInput = () => {
+    setInputValue("");
+    setDisplayValue("");
+  };
+
   return (
     <div>
       <h1>Input Display</h1>
@@ -22,6 +27,7 @@ export default function InputDisplay() {
         placeholder="Skriv något..."
       />
       <button onClick={showInput}>Visa text</button>
+      <button onClick={clearInput}>Clear input</button>
       <p>{displayValue}</p>
     </div>
   );
