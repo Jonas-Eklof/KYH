@@ -8,11 +8,11 @@ import InputDisplay from "./InputDisplay.jsx";
 function App() {
   return (
     <>
-      {/* <Header />
-      <ProfileCard name="Jonas" title="Student" />
-      <Parent />
-      <Grandparent />
-      <Footer /> */}
+      {/* <Header /> */}
+      <ProfileCard />
+      {/* <Parent /> */}
+      {/* <Grandparent /> */}
+      {/* <Footer /> */}
       <InputDisplay />
     </>
   );
