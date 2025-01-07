@@ -1,4 +1,4 @@
-function Buttons() {
+function OrderDoneButtons() {
   return (
     <div className="buttons">
       <button className="order-more">Beställ mer</button>
@@ -7,4 +7,4 @@ function Buttons() {
   );
 }
 
-export default Buttons;
+export default OrderDoneButtons;

@@ -1,6 +1,6 @@
-import Boxtop from "./assets/boxtop-1.svg";
+import Boxtop from "../../assets/boxtop-1.svg";
 
-function MainContent() {
+function OrderDoneMainContent() {
   return (
     <main className="main-content">
       <img src={Boxtop} alt="Boxtop" />
@@ -11,4 +11,4 @@ function MainContent() {
   );
 }
 
-export default MainContent;
+export default OrderDoneMainContent;

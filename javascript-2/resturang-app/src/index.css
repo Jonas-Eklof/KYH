@@ -23,7 +23,42 @@ body {
 }
 
 .navigation {
+  min-width: 300px;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    width: 64px;
+    aspect-ratio: 1;
+  }
+
+  .shopping-cart {
+    height: 64px;
+    aspect-ratio: 1;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+
+    img {
+      width: 96px;
+      margin-top: -15px;
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -10px;
+      right: -25px;
+      background-color: red;
+      color: white;
+      font-size: 0.9rem;
+      border-radius: 50%;
+      padding: 0.2rem 0.4rem;
+    }
+  }
 }
 
 .main-content {
@@ -35,6 +70,10 @@ body {
   h2 {
     font-size: 2.3rem;
     text-align: center;
+  }
+
+  h3 {
+    margin-top: -1rem;
   }
 
   p {
