@@ -10,11 +10,13 @@ export default function Counter() {
   const reset = () => setCount(0);
   const increment = () => setCount((count) => count + 1);
   return (
-    <div>
+    <div className="count">
       <h1>{count}</h1>
-      <button onClick={decrement}>Decrement</button>
-      <button onClick={reset}>Reset</button>
-      <button onClick={increment}>Increment</button>
+      <div className="count-buttons">
+        <button onClick={decrement}>Decrement</button>
+        <button onClick={reset}>Reset</button>
+        <button onClick={increment}>Increment</button>
+      </div>
     </div>
   );
 }

@@ -66,12 +66,19 @@ button:focus-visible {
   }
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .profile-card {
   background-color: #6786ee;
   color: hsl(0, 0%, 24%);
   max-width: 250px;
   border: 1px solid hsl(0, 0%, 81%);
   border-radius: 10px;
+  margin-top: 2rem;
   margin-left: 1rem;
   padding: 1.25rem;
   text-align: center;
@@ -82,4 +89,11 @@ button:focus-visible {
     height: auto;
     border-radius: 50%;
   }
+}
+
+.count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
 }

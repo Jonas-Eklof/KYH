@@ -5,18 +5,20 @@ import Parent from "./parent.jsx";
 import Grandparent from "./Grandparent.jsx";
 import InputDisplay from "./InputDisplay.jsx";
 import Counter from "./Counter.jsx";
+import Teman from "./Teman.jsx";
 
 function App() {
   return (
-    <>
+    <div className="wrapper">
       {/* <Header /> */}
-      <ProfileCard />
+      {/* <ProfileCard /> */}
       {/* <Parent /> */}
       {/* <Grandparent /> */}
       {/* <Footer /> */}
-      <InputDisplay />
-      <Counter />
-    </>
+      {/* <InputDisplay /> */}
+      {/* <Counter /> */}
+      <Teman />
+    </div>
   );
 }
 
