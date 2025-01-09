@@ -1,0 +1,12 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 3rem;
+}
+
+.card {
+  width: 150px;
+  aspect-ratio: 1;
+  background-color: purple;
+}
