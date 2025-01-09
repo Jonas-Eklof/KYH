@@ -10,7 +10,7 @@ function Navigation({ count }) {
       </a>
 
       <button className="shopping-cart">
-        <img src={ShoppingCart} alt="" />
+        <img src={ShoppingCart} alt="Shopping cart" />
         <span className="cart-count">{count}</span>
       </button>
     </nav>
