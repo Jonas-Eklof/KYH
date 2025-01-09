@@ -1,7 +1,7 @@
 import MenuItem from "./MenuItem";
 import "./Menu.css";
 
-export default function MenuMainContent() {
+export default function MenuMainContent({ onAddToCart }) {
   const menuItems = [
     {
       name: "KARLSTAD",
@@ -47,7 +47,7 @@ export default function MenuMainContent() {
     <section className="menu">
       <h2>MENY</h2>
       {menuItems.map((item, index) => (
-        <MenuItem key={index} {...item} />
+        <MenuItem key={index} {...item} onAddToCart={onAddToCart} />
       ))}
     </section>
   );

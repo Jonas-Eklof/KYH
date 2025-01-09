@@ -19,11 +19,14 @@ body {
 }
 
 .menu-item {
-  margin: 1rem 1rem 1rem 0;
+  margin: 0 1rem 2 0;
   color: white;
   width: 100%;
   margin-left: -2rem;
   padding: 5px 2rem;
+  padding-top: 1rem;
+  cursor: pointer;
+
   &:not(:last-child) {
     border-bottom: 1px dotted #ffffff7a;
   }

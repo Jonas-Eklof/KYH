@@ -1,8 +1,14 @@
 import "./Menu.css";
 
-export default function MenuItem({ name, price, description, dips }) {
+export default function MenuItem({
+  name,
+  price,
+  description,
+  dips,
+  onAddToCart,
+}) {
   return (
-    <div className="menu-item">
+    <div className="menu-item" onClick={onAddToCart}>
       <div className="menu-item-header">
         <span>{name}</span>
         <span>{price} SEK</span>
