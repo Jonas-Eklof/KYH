@@ -7,6 +7,8 @@ import InputDisplay from "./InputDisplay.jsx";
 import Counter from "./Counter.jsx";
 import Teman from "./Teman.jsx";
 import Card from "./components/Card.jsx";
+import KnappMedState from "./components/knapp-med-state/KnappMedState.jsx";
+import Greeting from "./components/Greeting.jsx";
 
 function App() {
   return (
@@ -18,9 +20,12 @@ function App() {
       {/* <Footer /> */}
       {/* <InputDisplay /> */}
       {/* <Counter /> */}
-      <Teman />
-      {/* <h1>Card Memory Game</h1> */}
-      {/* <Card /> */}
+      {/* <Teman /> */}
+      {/* <KnappMedState /> */}
+      <h1>Card Memory Game</h1>
+      <Card />
+      {/* <Greeting namn="Jonas" /> */}
+      {/* <Greeting namn="Gäst" /> */}
     </div>
   );
 }
