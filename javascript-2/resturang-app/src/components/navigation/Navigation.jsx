@@ -1,13 +1,15 @@
 import React from "react";
 import Logo from "../../assets/logo.svg";
 import ShoppingCart from "../../assets/shoppingcart.svg";
+import { Link } from "react-router-dom";
+import "./Navigation.css";
 
 function Navigation({ count }) {
   return (
     <nav className="navigation">
-      <a href="/">
+      <Link to="/">
         <img src={Logo} className="logo" alt="Logo" />
-      </a>
+      </Link>
 
       <button className="shopping-cart">
         <img src={ShoppingCart} alt="Shopping cart" />

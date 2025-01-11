@@ -1,0 +1,36 @@
+.buttons {
+  margin-top: 70px;
+  text-shadow: 1px 1px 0 #0000004d;
+
+  button {
+    height: 77px;
+    width: 100%;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .order-more {
+    background-color: #353131;
+    text-shadow: 1px 1px 0 #0000004d;
+
+    &:hover {
+      background-color: #242020;
+    }
+  }
+
+  .receipt {
+    background-color: transparent;
+    border: 2px solid #f4f3f1f0;
+    text-shadow: 1px 1px 0 #0000004d;
+
+    &:hover {
+      background-color: #e1e1e1;
+      color: #353131;
+    }
+  }
+}

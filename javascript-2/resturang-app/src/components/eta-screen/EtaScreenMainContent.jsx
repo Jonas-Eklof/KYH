@@ -1,4 +1,5 @@
 import Boxtop from "../../assets/boxtop-1.svg";
+import OrderDoneButtons from "../order-done-screen/OrderDoneButtons";
 import "./eta-screen.css";
 
 export default function EtaScreenMainContent() {
@@ -10,6 +11,8 @@ export default function EtaScreenMainContent() {
       <h3 className="eta-time">ETA 5 MIN</h3>
 
       <p className="order-code">#4kjwsdf234k</p>
+
+      <OrderDoneButtons />
     </main>
   );
 }
