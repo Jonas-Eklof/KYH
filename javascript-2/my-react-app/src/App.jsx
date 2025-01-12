@@ -15,7 +15,7 @@ import SidebarNav from "./components/sidebar-nav/SidebarNav.jsx";
 function App() {
   return (
     <div className="wrapper">
-      {/* <Header /> */}
+      <Header />
       <SidebarNav />
       <div className="main-content">
         <Routes>
@@ -28,17 +28,7 @@ function App() {
           <Route path="/Greeting" element={<Greeting namn="Jonas" />} />
         </Routes>
       </div>
-      {/* <ProfileCard /> */}
-      {/* <Parent /> */}
-      {/* <Grandparent /> */}
       {/* <Footer /> */}
-      {/* <InputDisplay /> */}
-      {/* <Counter /> */}
-      {/* <Teman /> */}
-      {/* <KnappMedState /> */}
-      {/* <Card /> */}
-      {/* <Greeting namn="Jonas" /> */}
-      {/* <Greeting namn="Gäst" /> */}
     </div>
   );
 }

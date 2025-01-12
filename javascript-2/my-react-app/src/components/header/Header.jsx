@@ -2,7 +2,7 @@ function Header() {
   return (
     <header>
       <div>
-        <h1>Logo Here</h1>
+        <h1>Jonas' React-projekt</h1>
       </div>
     </header>
   );
