@@ -23,7 +23,6 @@ function App() {
           <Route path="/Ancestree" element={<Grandparent />} />
           <Route path="/InputDisplay" element={<InputDisplay />} />
           <Route path="/Counter" element={<Counter />} />
-          <Route path="/Themes" element={<Teman />} />
           <Route path="/ButtonWithState" element={<KnappMedState />} />
           <Route path="/MemoryGame" element={<Card />} />
           <Route path="/Greeting" element={<Greeting namn="Jonas" />} />
@@ -37,7 +36,6 @@ function App() {
       {/* <Counter /> */}
       {/* <Teman /> */}
       {/* <KnappMedState /> */}
-      {/* <h1>Card Memory Game</h1> */}
       {/* <Card /> */}
       {/* <Greeting namn="Jonas" /> */}
       {/* <Greeting namn="Gäst" /> */}

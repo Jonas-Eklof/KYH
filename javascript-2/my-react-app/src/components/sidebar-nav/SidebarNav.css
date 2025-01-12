@@ -1,12 +1,13 @@
 .sidebar-nav {
   list-style: none;
   font-size: 1.3rem;
-  margin-top: 200px;
-  margin-right: -150px;
-  margin-left: 2rem;
+  margin-top: 150px;
+  margin-right: -200px;
+  margin-left: 3rem;
   background-color: rgb(219, 219, 219);
   padding: 2rem;
   border-radius: 15px;
+  max-height: 220px;
 
   li {
     color: #333;

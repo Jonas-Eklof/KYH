@@ -16,10 +16,13 @@ const colors = [
 
 export default function Card() {
   return (
-    <section className="card-container">
-      {colors.map((color) => (
-        <ColorCard color={color} key={color} />
-      ))}
-    </section>
+    <>
+      <h1>Card Memory Game</h1>
+      <section className="card-container">
+        {colors.map((color) => (
+          <ColorCard color={color} key={color} />
+        ))}
+      </section>
+    </>
   );
 }

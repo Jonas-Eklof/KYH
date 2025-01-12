@@ -23,9 +23,6 @@ export default function SidebarNav() {
       <Link to="/ButtonWithState">
         <li>Button with state</li>
       </Link>
-      <Link to="/Themes">
-        <li>Themes</li>
-      </Link>
       <Link to="/MemoryGame">
         <li>Memory Game</li>
       </Link>
