@@ -1,19 +1,34 @@
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
-import ProfileCard from "./ProfileCard.jsx";
-import Parent from "./parent.jsx";
-import Grandparent from "./Grandparent.jsx";
-import InputDisplay from "./InputDisplay.jsx";
-import Counter from "./Counter.jsx";
-import Teman from "./Teman.jsx";
-import Card from "./components/Card.jsx";
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/header/Header.jsx";
+import Footer from "./components/footer/Footer.jsx";
+import ProfileCard from "./components/profile-card/ProfileCard.jsx";
+import Parent from "./components/ancestree/Parent.jsx";
+import Grandparent from "./components/ancestree/Grandparent.jsx";
+import InputDisplay from "./components/input-display/InputDisplay.jsx";
+import Counter from "./components/counter/Counter.jsx";
+import Teman from "./components/teman/Teman.jsx";
+import Card from "./components/memory-game/Card.jsx";
 import KnappMedState from "./components/knapp-med-state/KnappMedState.jsx";
-import Greeting from "./components/Greeting.jsx";
+import Greeting from "./components/greeting/Greeting.jsx";
+import SidebarNav from "./components/sidebar-nav/SidebarNav.jsx";
 
 function App() {
   return (
     <div className="wrapper">
       {/* <Header /> */}
+      <SidebarNav />
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={<ProfileCard />} />
+          <Route path="/Ancestree" element={<Grandparent />} />
+          <Route path="/InputDisplay" element={<InputDisplay />} />
+          <Route path="/Counter" element={<Counter />} />
+          <Route path="/Themes" element={<Teman />} />
+          <Route path="/ButtonWithState" element={<KnappMedState />} />
+          <Route path="/MemoryGame" element={<Card />} />
+          <Route path="/Greeting" element={<Greeting namn="Jonas" />} />
+        </Routes>
+      </div>
       {/* <ProfileCard /> */}
       {/* <Parent /> */}
       {/* <Grandparent /> */}
@@ -22,8 +37,8 @@ function App() {
       {/* <Counter /> */}
       {/* <Teman /> */}
       {/* <KnappMedState /> */}
-      <h1>Card Memory Game</h1>
-      <Card />
+      {/* <h1>Card Memory Game</h1> */}
+      {/* <Card /> */}
       {/* <Greeting namn="Jonas" /> */}
       {/* <Greeting namn="Gäst" /> */}
     </div>
