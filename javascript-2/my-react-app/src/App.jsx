@@ -11,6 +11,7 @@ import Card from "./components/memory-game/Card.jsx";
 import KnappMedState from "./components/knapp-med-state/KnappMedState.jsx";
 import Greeting from "./components/greeting/Greeting.jsx";
 import SidebarNav from "./components/sidebar-nav/SidebarNav.jsx";
+import ToggleInvisible from "./components/toggle-invisible/ToggleInvisible.jsx";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/ButtonWithState" element={<KnappMedState />} />
           <Route path="/MemoryGame" element={<Card />} />
           <Route path="/Greeting" element={<Greeting namn="Jonas" />} />
+          <Route path="/ToggleVisible" element={<ToggleInvisible />} />
         </Routes>
       </div>
       {/* <Footer /> */}

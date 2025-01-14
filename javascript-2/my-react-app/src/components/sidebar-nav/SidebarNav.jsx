@@ -26,6 +26,9 @@ export default function SidebarNav() {
       <Link to="/MemoryGame">
         <li>Memory Game</li>
       </Link>
+      <Link to="/ToggleVisible">
+        <li>Toggle visible</li>
+      </Link>
     </ul>
   );
 }
