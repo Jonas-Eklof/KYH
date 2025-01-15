@@ -19,8 +19,12 @@ function Hackathon() {
       timeOfDay = "God kväll";
     }
 
-    setGreeting(`${timeOfDay}, ${name}.`);
-    setName("");
+    if (name.trim() === "") {
+      setGreeting("Du behöver skriva in ditt namn.");
+    } else {
+      setGreeting(`${timeOfDay}, ${name}.`);
+      setName("");
+    }
   };
 
   return (
