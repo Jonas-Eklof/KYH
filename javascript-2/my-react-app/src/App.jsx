@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import ProfileCard from "./components/profile-card/ProfileCard.jsx";
-import Parent from "./components/ancestree/Parent.jsx";
+import Parent from "./components/profile-card/Parent.jsx";
 import Grandparent from "./components/ancestree/Grandparent.jsx";
 import InputDisplay from "./components/input-display/InputDisplay.jsx";
 import Counter from "./components/counter/Counter.jsx";
@@ -12,6 +12,7 @@ import KnappMedState from "./components/knapp-med-state/KnappMedState.jsx";
 import Greeting from "./components/greeting/Greeting.jsx";
 import SidebarNav from "./components/sidebar-nav/SidebarNav.jsx";
 import ToggleInvisible from "./components/toggle-invisible/ToggleInvisible.jsx";
+import Hackathon from "./components/hackathon/Hackathon.jsx";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/MemoryGame" element={<Card />} />
           <Route path="/Greeting" element={<Greeting namn="Jonas" />} />
           <Route path="/ToggleVisible" element={<ToggleInvisible />} />
+          <Route path="/Hackathon" element={<Hackathon />} />
         </Routes>
       </div>
       {/* <Footer /> */}

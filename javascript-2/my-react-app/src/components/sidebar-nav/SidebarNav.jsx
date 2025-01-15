@@ -29,6 +29,9 @@ export default function SidebarNav() {
       <Link to="/ToggleVisible">
         <li>Toggle visible</li>
       </Link>
+      <Link to="/Hackathon">
+        <li>"Hackathon"</li>
+      </Link>
     </ul>
   );
 }

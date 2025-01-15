@@ -1,0 +1,15 @@
+.hackathon {
+  input {
+    height: 2rem;
+    width: 15rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+  }
+}
+
+.greeting-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
