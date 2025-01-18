@@ -10,3 +10,8 @@
   aspect-ratio: 1;
   background-color: purple;
 }
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}

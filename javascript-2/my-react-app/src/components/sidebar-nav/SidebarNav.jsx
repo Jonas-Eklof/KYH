@@ -32,6 +32,9 @@ export default function SidebarNav() {
       <Link to="/Hackathon">
         <li>"Hackathon"</li>
       </Link>
+      <Link to="/ClassButtons">
+        <li>ClassButtons</li>
+      </Link>
     </ul>
   );
 }

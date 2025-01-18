@@ -13,6 +13,7 @@ import Greeting from "./components/greeting/Greeting.jsx";
 import SidebarNav from "./components/sidebar-nav/SidebarNav.jsx";
 import ToggleInvisible from "./components/toggle-invisible/ToggleInvisible.jsx";
 import Hackathon from "./components/hackathon/Hackathon.jsx";
+import ClassButtons from "./components/class-buttons/ClassButtons.jsx";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/Greeting" element={<Greeting namn="Jonas" />} />
           <Route path="/ToggleVisible" element={<ToggleInvisible />} />
           <Route path="/Hackathon" element={<Hackathon />} />
+          <Route path="/ClassButtons" element={<ClassButtons />} />
         </Routes>
       </div>
       {/* <Footer /> */}
