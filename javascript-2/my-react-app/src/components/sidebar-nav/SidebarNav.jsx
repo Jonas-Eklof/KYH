@@ -35,6 +35,9 @@ export default function SidebarNav() {
       <Link to="/ClassButtons">
         <li>ClassButtons</li>
       </Link>
+      <Link to="/PropStyleButton">
+        <li>PropStyleButton</li>
+      </Link>
     </ul>
   );
 }

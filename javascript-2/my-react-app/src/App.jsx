@@ -14,6 +14,7 @@ import SidebarNav from "./components/sidebar-nav/SidebarNav.jsx";
 import ToggleInvisible from "./components/toggle-invisible/ToggleInvisible.jsx";
 import Hackathon from "./components/hackathon/Hackathon.jsx";
 import ClassButtons from "./components/class-buttons/ClassButtons.jsx";
+import PropStyleButton from "./components/prop-style-button/PropStyleButton.jsx";
 
 function App() {
   return (
@@ -32,6 +33,38 @@ function App() {
           <Route path="/ToggleVisible" element={<ToggleInvisible />} />
           <Route path="/Hackathon" element={<Hackathon />} />
           <Route path="/ClassButtons" element={<ClassButtons />} />
+          <Route
+            path="/PropStyleButton"
+            element={
+              <>
+                <PropStyleButton variant="primary" size="small">
+                  Small Primary
+                </PropStyleButton>
+                <PropStyleButton
+                  variant="secondary"
+                  size="medium"
+                  onClick={() => alert("Medium secondary button clicked")}
+                >
+                  Medium Secondary
+                </PropStyleButton>
+                <PropStyleButton
+                  variant="danger"
+                  size="large"
+                  onClick={() => alert("Large danger button clicked")}
+                >
+                  Large Danger
+                </PropStyleButton>
+                <PropStyleButton
+                  variant="danger"
+                  size="large"
+                  disabled="disabled"
+                  onClick={() => alert("Large danger button clicked")}
+                >
+                  Disabled Large Danger
+                </PropStyleButton>
+              </>
+            }
+          />
         </Routes>
       </div>
       {/* <Footer /> */}

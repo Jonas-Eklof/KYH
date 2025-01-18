@@ -1,0 +1,59 @@
+/* Grundläggande stil */
+.button {
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em 1em;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Varianter */
+.button.primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.button.secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.button.danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Storlekar */
+.button.small {
+  font-size: 0.8rem;
+  padding: 0.4em 0.8em;
+}
+
+.button.medium {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+}
+
+.button.large {
+  font-size: 1.2rem;
+  padding: 0.6em 1.2em;
+}
+
+/* Disabled stil */
+.button.disabled,
+.button:disabled {
+  background-color: #e0e0e0;
+  color: #8a8a8a;
+  cursor: not-allowed;
+}
+
+/* Hover-effekter */
+.button:not(.disabled):hover {
+  transform: scale(1.05);
+}
+
+.button:not(.disabled):active {
+  transform: scale(0.95);
+}
