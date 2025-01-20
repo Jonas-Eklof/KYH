@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       if (!response.ok) throw new Error(`Error: ${response.status}`);
       const data = await response.json(); // Konverterar den mottagna datan till json-format
-      // console.log(data);
+      console.log(data);
       return data; // Returnerar datan när funktionen kallas
     } catch (error) {
       console.error("Error fetching planets:", error);
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
       (p) => p.name.toLowerCase().trim() === planetName.toLowerCase().trim()
     );
     updatePlanetInfo(planet); // Uppdaterar html-sidan med info om planeten
-    // console.log(planets.bodies.map((p) => p.name)); // console.log() som användes för debugging
+    console.log(planets.bodies.map((p) => p.name)); // console.log() som användes för debugging
   }
 
   loadSolarSystemData(); // Kallar på funktionen som laddar in relevant data till sidan beroende på vilken planetsida som visas

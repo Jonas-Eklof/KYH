@@ -15,6 +15,7 @@ import ToggleInvisible from "./components/toggle-invisible/ToggleInvisible.jsx";
 import Hackathon from "./components/hackathon/Hackathon.jsx";
 import ClassButtons from "./components/class-buttons/ClassButtons.jsx";
 import PropStyleButton from "./components/prop-style-button/PropStyleButton.jsx";
+import ToDo from "./components/todo/ToDo.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <div className="main-content">
         <Routes>
           <Route path="/" element={<ProfileCard />} />
+          <Route path="/ParentProfileCard" element={<Parent />} />
           <Route path="/Ancestree" element={<Grandparent />} />
           <Route path="/InputDisplay" element={<InputDisplay />} />
           <Route path="/Counter" element={<Counter />} />
@@ -65,6 +67,7 @@ function App() {
               </>
             }
           />
+          <Route path="/Todo" element={<ToDo />} />
         </Routes>
       </div>
       {/* <Footer /> */}

@@ -7,17 +7,22 @@ export default function Parent() {
   };
 
   return (
-    <div>
-      <ProfileCard name={user.name} title={user.title} />
+    <div className="profile-card">
+      <ProfileCards
+        name={user.name}
+        title={user.title}
+        img="https://picsum.photos/199/200"
+      />
     </div>
   );
 }
 
-function ProfileCard({ name, title }) {
+function ProfileCards({ name, title, img }) {
   return (
     <div>
-      <h1>{name}</h1>
-      <h1>{title}</h1>
+      <img src={img} alt={name} />
+      <h2 className="name">{name}</h2>
+      <h3 className="status">{title}</h3>
     </div>
   );
 }

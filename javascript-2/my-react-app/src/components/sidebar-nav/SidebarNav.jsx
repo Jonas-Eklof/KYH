@@ -8,6 +8,9 @@ export default function SidebarNav() {
       <Link to="/">
         <li>Profile Card</li>
       </Link>
+      <Link to="/ParentProfileCard">
+        <li>Parent Profile Card</li>
+      </Link>
       <Link to="/Ancestree">
         <li>Ancestree</li>
       </Link>
@@ -37,6 +40,9 @@ export default function SidebarNav() {
       </Link>
       <Link to="/PropStyleButton">
         <li>PropStyleButton</li>
+      </Link>
+      <Link to="/ToDo">
+        <li>ToDo-list</li>
       </Link>
     </ul>
   );
