@@ -17,6 +17,9 @@ export default function SidebarNav() {
       <Link to="/Counter">
         <li>Counter</li>
       </Link>
+      <Link to="/Timer">
+        <li>Timer</li>
+      </Link>
       <Link to="/Greeting">
         <li>Greeting</li>
       </Link>

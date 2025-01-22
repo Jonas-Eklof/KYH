@@ -16,6 +16,7 @@ import Hackathon from "./components/hackathon/Hackathon.jsx";
 import ClassButtons from "./components/class-buttons/ClassButtons.jsx";
 import PropStyleButton from "./components/prop-style-button/PropStyleButton.jsx";
 import ToDo from "./components/todo/ToDo.jsx";
+import Timer from "./components/timer/Timer.jsx";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/Ancestree" element={<Grandparent />} />
           <Route path="/InputDisplay" element={<InputDisplay />} />
           <Route path="/Counter" element={<Counter />} />
+          <Route path="/Timer" element={<Timer />} />
           <Route path="/ButtonWithState" element={<KnappMedState />} />
           <Route path="/MemoryGame" element={<Card />} />
           <Route path="/Greeting" element={<Greeting namn="Jonas" />} />
