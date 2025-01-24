@@ -47,6 +47,12 @@ export default function SidebarNav() {
       <Link to="/ToDo">
         <li>ToDo-list</li>
       </Link>
+      <Link to="/ReduxCounter">
+        <li>Redux Counter</li>
+      </Link>
+      <Link to="/Gallery">
+        <li>Gallery</li>
+      </Link>
     </ul>
   );
 }

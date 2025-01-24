@@ -17,6 +17,8 @@ import ClassButtons from "./components/class-buttons/ClassButtons.jsx";
 import PropStyleButton from "./components/prop-style-button/PropStyleButton.jsx";
 import ToDo from "./components/todo/ToDo.jsx";
 import Timer from "./components/timer/Timer.jsx";
+import ReduxCounter from "./components/redux-counter/ReduxCounter.jsx";
+import Gallery from "./components/gallery/Gallery.jsx";
 
 function App() {
   return (
@@ -70,6 +72,8 @@ function App() {
             }
           />
           <Route path="/Todo" element={<ToDo />} />
+          <Route path="/ReduxCounter" element={<ReduxCounter />} />
+          <Route path="/Gallery" element={<Gallery />} />
         </Routes>
       </div>
       {/* <Footer /> */}
