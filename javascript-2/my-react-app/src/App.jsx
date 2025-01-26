@@ -35,7 +35,7 @@ function App() {
           <Route path="/Timer" element={<Timer />} />
           <Route path="/ButtonWithState" element={<KnappMedState />} />
           <Route path="/MemoryGame" element={<Card />} />
-          <Route path="/Greeting" element={<Greeting namn="Jonas" />} />
+          <Route path="/Greeting" element={<Greeting />} />
           <Route path="/ToggleVisible" element={<ToggleInvisible />} />
           <Route path="/Hackathon" element={<Hackathon />} />
           <Route path="/ClassButtons" element={<ClassButtons />} />
