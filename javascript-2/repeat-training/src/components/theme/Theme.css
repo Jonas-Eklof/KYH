@@ -1,0 +1,13 @@
+.lightMode {
+  background-color: turquoise;
+  color: darkblue;
+
+  button {
+    color: cyan;
+  }
+}
+
+.darkMode {
+  background-color: darkblue;
+  color: cyan;
+}
