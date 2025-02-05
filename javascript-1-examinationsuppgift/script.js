@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function getApiKey() {
     try {
       let response = await fetch(
-        "https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/keys", // Hämtar api-nyckel via POST-metoden
+        "https://i4kif2xfk7.execute-api.eu-north-1.amazonaws.com/keys", // Hämtar api-nyckel via POST-metoden
         { method: "POST" } // POST används för att skicka/begära data/resurs som kräver autentisering
       );
       if (!response.ok) throw new Error("Failed to fetch API key"); // Om responsen inte är .ok så slängs ett error
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // API-nyckeln ges som parameter i denna funktion för att kunna användas som variabel för API-nyckeln i funktionen
     try {
       let response = await fetch(
-        "https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/bodies",
+        "https://i4kif2xfk7.execute-api.eu-north-1.amazonaws.com/bodies",
         {
           method: "GET", // GET används för att begära/hämta data.
           headers: { "x-zocom": apiKey }, // Använder API-nyckeln för att autentisera och tillåta begäran om data om planeterna.
