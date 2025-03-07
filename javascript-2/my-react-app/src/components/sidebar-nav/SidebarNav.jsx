@@ -53,6 +53,9 @@ export default function SidebarNav() {
       <Link to="/Gallery">
         <li>Gallery</li>
       </Link>
+      <Link to="/ApiTest">
+        <li>ApiTest</li>
+      </Link>
     </ul>
   );
 }
