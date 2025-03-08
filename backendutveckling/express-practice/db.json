@@ -1,0 +1,18 @@
+{
+  "colors": [
+    {
+      "id": "1",
+      "name": "Red",
+      "hex": "#FF0000",
+      "rgb": "rgb(255, 0, 0)",
+      "description": "A bright, bold color that represents energy and passion."
+    },
+    {
+      "id": "3037",
+      "name": "Green",
+      "hex": "#00FF00",
+      "rgb": "rgb(0, 255, 0)",
+      "description": "A color representing nature, growth, and harmony."
+    }
+  ]
+}
