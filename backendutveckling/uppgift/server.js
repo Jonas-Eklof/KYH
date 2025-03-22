@@ -58,8 +58,8 @@ app.get("/about", (req, res) => {
   res.json({ version: "1.0.0", author: "Jonas" });
 });
 
-// 404-felhantering
-app.use((req, res) => {
+// 404-felhantering för routes som inte finns specificerade med användning av "wildcard * "
+app.get("/*", (req, res) => {
   res.status(404).json({ message: "Sidan kunde inte hittas" });
 });
 
