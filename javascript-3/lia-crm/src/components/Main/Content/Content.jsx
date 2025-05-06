@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Search,
-  Filter,
-  PlusCircle,
-  MoreVertical,
-  ArrowUpDown,
-} from "lucide-react";
+import { Search, Filter, PlusCircle } from "lucide-react";
 
 export default function Content() {
   const companies = [
@@ -42,7 +36,7 @@ export default function Content() {
   return (
     <div className="companies space-y-6">
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-gray-800">Companies</h1>
+        <h1 className="text-2xl font-bold text-gray-700">Companies</h1>
         <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center">
           <PlusCircle size={16} className="mr-2" />
           Add Company
