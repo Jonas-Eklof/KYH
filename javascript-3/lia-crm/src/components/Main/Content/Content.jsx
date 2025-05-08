@@ -1,8 +1,9 @@
-import React from "react";
-import { Search, Filter, PlusCircle } from "lucide-react";
+import React, { useState } from "react";
+import { Search, Filter, PlusCircle, Trash2 } from "lucide-react";
+import AddCompany from "./AddCompany";
 
 export default function Content() {
-  const companies = [
+  const [companies, setCompanies] = useState([
     {
       id: 1,
       name: "Company one",
@@ -16,32 +17,32 @@ export default function Content() {
       status: "Active",
       lastContact: "2 days ago",
     },
-    {
-      id: 2,
-      name: "Company two",
-      email: "companytwo@companytwo.com",
-      status: "Declined",
-      response: "Yes",
-      lastContact: "2 days ago",
-    },
-    {
-      id: 3,
-      name: "Company three",
-      email: "companythree@companythree.com",
-      status: "Active",
-      response: "None",
-      lastContact: "2 days ago",
-    },
-  ];
+  ]);
+
+  const [isAddCompanyOpen, setIsAddCompanyOpen] = useState(false);
+
+  const handleAddCompany = (newCompany) => {
+    setCompanies([...companies, newCompany]);
+  };
+
   return (
     <div className="companies space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-700">Companies</h1>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center">
+        <button
+          onClick={() => setIsAddCompanyOpen(true)}
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center"
+        >
           <PlusCircle size={16} className="mr-2" />
           Add Company
         </button>
       </div>
+
+      <AddCompany
+        isOpen={isAddCompanyOpen}
+        onClose={() => setIsAddCompanyOpen(false)}
+        onAddCompany={handleAddCompany}
+      />
       <div className="bg-white rounded-lg shadow-sm border border-gray-100">
         <div className="p-4 border-b border-gray-200 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="relative flex-1">
@@ -102,7 +103,7 @@ export default function Content() {
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
               {companies.map((company) => (
-                <tr key={company.id} className="hover:bg-gray-50">
+                <tr key={company.id} className=" hover:bg-gray-50">
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="font-medium text-gray-900">
                       {company.name}
@@ -153,6 +154,9 @@ export default function Content() {
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
                     {company.lastContact}
                   </td>
+                  <span>
+                    <Trash2 size={18} />
+                  </span>
                 </tr>
               ))}
             </tbody>

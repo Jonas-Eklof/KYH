@@ -5,6 +5,7 @@ import Header from "./components/Main/Header/Header";
 
 function App() {
   const [activeView, setActiveView] = useState("companies");
+
   return (
     <div className="flex h-screen bg-gray-50">
       <Sidebar activeView={activeView} setActiveView={setActiveView} />
