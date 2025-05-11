@@ -1,18 +1,10 @@
-import {
-  HomeIcon,
-  UsersIcon,
-  BarChart3Icon,
-  CalendarIcon,
-  SettingsIcon,
-  HelpCircleIcon,
-  LogOutIcon,
-} from "lucide-react";
+import { UsersIcon, LogOutIcon } from "lucide-react";
 
 export default function Sidebar({ activeView, setActiveView }) {
   const menuItems = [
     {
       id: "companies",
-      label: "Companies",
+      label: "Företag",
       icon: UsersIcon,
     },
   ];

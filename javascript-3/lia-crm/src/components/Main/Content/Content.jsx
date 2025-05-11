@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import { Search, Filter, PlusCircle, Trash2 } from "lucide-react";
 import AddCompany from "./AddCompany";
+import CompaniesHeader from "./CompaniesHeader";
+import SearchAndFilter from "./SearchAndFilter";
+import CompanyTable from "./CompanyTable";
 
 export default function Content() {
+  const [companyToEdit, setCompanyToEdit] = useState(null);
   const [companies, setCompanies] = useState([
     {
       id: 1,
@@ -10,158 +13,88 @@ export default function Content() {
       contact: "John Doe",
       email: "companyone@companyone.com",
       phone: "123 12",
-      time: "4/4/25",
+      time: "2025-04-04",
       how: "email/call",
-      response: "None",
+      response: "N/A",
       nextStep: "Followup",
-      status: "Active",
+      status: "Aktiv",
       lastContact: "2 days ago",
     },
   ]);
 
   const [isAddCompanyOpen, setIsAddCompanyOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filter, setFilter] = useState("Alla");
+
+  const filteredCompanies = companies.filter((company) => {
+    // Sökfunktion
+    const matchesSearch = company.name
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
+
+    // Filterfunktion
+    let matchesFilter = true;
+    if (filter === "Aktiva") matchesFilter = company.status === "Aktiv";
+    if (filter === "Inaktiva") matchesFilter = company.status === "Inaktiv";
+
+    return matchesSearch && matchesFilter;
+  });
 
   const handleAddCompany = (newCompany) => {
     setCompanies([...companies, newCompany]);
   };
 
+  const handleEditCompany = (updatedCompany) => {
+    setCompanies((prevCompanies) =>
+      prevCompanies.map((company) =>
+        company.id === updatedCompany.id ? updatedCompany : company
+      )
+    );
+    setCompanyToEdit(null);
+  };
+
+  const handleDeleteCompany = (id) => {
+    const confirmDelete = window.confirm(
+      "Är du säker på att du vill ta bort detta företag?"
+    );
+    if (confirmDelete) {
+      setCompanies((prevCompany) =>
+        prevCompany.filter((company) => company.id !== id)
+      );
+    }
+  };
+
   return (
     <div className="companies space-y-6">
-      <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-gray-700">Companies</h1>
-        <button
-          onClick={() => setIsAddCompanyOpen(true)}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center"
-        >
-          <PlusCircle size={16} className="mr-2" />
-          Add Company
-        </button>
-      </div>
+      <CompaniesHeader onAddCompany={() => setIsAddCompanyOpen(true)} />
 
       <AddCompany
         isOpen={isAddCompanyOpen}
-        onClose={() => setIsAddCompanyOpen(false)}
+        onClose={() => {
+          setIsAddCompanyOpen(false);
+          setCompanyToEdit(null);
+        }}
         onAddCompany={handleAddCompany}
+        onEditCompany={handleEditCompany}
+        companyToEdit={companyToEdit}
       />
+
       <div className="bg-white rounded-lg shadow-sm border border-gray-100">
-        <div className="p-4 border-b border-gray-200 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div className="relative flex-1">
-            <input
-              type="text"
-              placeholder="Search company..."
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
-            <Search className="absolute left-3 top-3 text-gray-400" size={18} />
-          </div>
-          <div className="flex items-center gap-2">
-            <button className="flex items-center px-3 py-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50">
-              <Filter size={16} className="mr-2" />
-              <span>Filter</span>
-            </button>
-            <select className="px-3 py-2 border border-gray-300 rounded-lg text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option>All Companies</option>
-              <option>Active</option>
-              <option>Inactive</option>
-            </select>
-          </div>
-        </div>
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead>
-              <tr className="bg-gray-50">
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  <div className="flex items-center">Name</div>
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  <div className="flex items-center">Contact</div>
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  <div className="flex items-center">Email</div>
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  <div className="flex items-center">Phone</div>
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  <div className="flex items-center">Time</div>
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  <div className="flex items-center">How?</div>
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  <div className="flex items-center">Response?</div>
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  <div className="flex items-center">Next step</div>
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Status
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Last Contact
-                </th>
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              {companies.map((company) => (
-                <tr key={company.id} className=" hover:bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="font-medium text-gray-900">
-                      {company.name}
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900">
-                      {company.contact}
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    {company.email}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    {company.phone}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    {company.time}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    {company.how}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span
-                      className={`px-2 py-1 text-xs rounded-full ${
-                        company.response === "Yes"
-                          ? "bg-green-100 text-green-800"
-                          : "bg-gray-100 text-gray-800"
-                      }`}
-                    >
-                      {company.response}
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    {company.nextStep}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span
-                      className={`px-2 py-1 text-xs rounded-full ${
-                        company.status === "Active"
-                          ? "bg-green-100 text-green-800"
-                          : "bg-gray-100 text-gray-800"
-                      }`}
-                    >
-                      {company.status}
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    {company.lastContact}
-                  </td>
-                  <span>
-                    <Trash2 size={18} />
-                  </span>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <SearchAndFilter
+          searchQuery={searchQuery}
+          onSearchChange={(e) => setSearchQuery(e.target.value)}
+          filter={filter}
+          onFilterChange={(e) => setFilter(e.target.value)}
+        />
+
+        <CompanyTable
+          companies={filteredCompanies}
+          onEdit={(company) => {
+            setCompanyToEdit(company);
+            setIsAddCompanyOpen(true);
+          }}
+          onDelete={handleDeleteCompany}
+        />
       </div>
     </div>
   );
