@@ -80,6 +80,7 @@ body {
     button.active {
       background-color: var(--red-400);
       color: var(--dark-blue);
+      cursor: pointer;
     }
   }
 
@@ -183,6 +184,32 @@ body {
           border-radius: 50%;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    max-width: 80%;
+    margin-inline: auto;
+  }
+
+  .extension-card-wrapper > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .card {
+    margin: 0 !important;
+  }
+
+  .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      max-height: 40px;
     }
   }
 }

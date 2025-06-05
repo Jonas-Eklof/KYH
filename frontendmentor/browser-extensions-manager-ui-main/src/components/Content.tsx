@@ -30,17 +30,19 @@ const Content = () => {
 
   return (
     <section className="content">
-      <h1>Extensions List</h1>
-      <div className="filter-buttons">
-        {filterButtons.map((filterButton) => (
-          <button
-            key={filterButton}
-            onClick={() => setActiveFilter(filterButton)}
-            className={`... ${activeFilter === filterButton ? "active" : ""}`}
-          >
-            {filterButton}
-          </button>
-        ))}
+      <div className="content-header">
+        <h1>Extensions List</h1>
+        <div className="filter-buttons">
+          {filterButtons.map((filterButton) => (
+            <button
+              key={filterButton}
+              onClick={() => setActiveFilter(filterButton)}
+              className={`... ${activeFilter === filterButton ? "active" : ""}`}
+            >
+              {filterButton}
+            </button>
+          ))}
+        </div>
       </div>
       <div className="extension-card-wrapper">
         <ExtensionCard
